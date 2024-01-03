@@ -18,8 +18,7 @@ public class Resources : MonoBehaviour
     private void OnMouseUp()
     {
         List<GameObject> sameTypeResources = new List<GameObject>();
-
-        // 检测周围的相同类型资源
+        
         Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, detectionRadius);
         foreach (var hitCollider in hitColliders)
         {
@@ -29,8 +28,7 @@ public class Resources : MonoBehaviour
                 sameTypeResources.Add(resource.gameObject);
             }
         }
-
-        // 如果数量超过3个，则合并
+        
         if (sameTypeResources.Count >= 3)
         {
             MergeResources(sameTypeResources);
