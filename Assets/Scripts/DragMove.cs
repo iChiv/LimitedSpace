@@ -5,10 +5,7 @@ using UnityEngine;
 
 public class DragMove : MonoBehaviour
 {
-    public float slowSpeed;
-    public float slowThreshold;
     private bool _isDragging = false;
-    private Vector2 _slowSpeedV2;
     private Vector2 _initialMousePosition;
     private Vector3 _initialObjectPosition;
     private Rigidbody2D _rb;
@@ -16,7 +13,6 @@ public class DragMove : MonoBehaviour
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-        _slowSpeedV2 = new Vector2(slowSpeed, slowSpeed);
     }
 
     void Update()
@@ -36,6 +32,7 @@ public class DragMove : MonoBehaviour
 
         if (_isDragging)
         {
+            _rb.isKinematic = true;
             Vector2 currentMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 positionOffset = currentMousePosition - _initialMousePosition;
             Vector2 newPosition = _initialObjectPosition + new Vector3(positionOffset.x, positionOffset.y, 0);
@@ -46,17 +43,19 @@ public class DragMove : MonoBehaviour
         {
             _isDragging = false;
         }
-        
-        
-        //Slow down after collision
-        if (_rb.velocity.magnitude >= slowThreshold)
+    }
+
+    private void FixedUpdate()
+    {
+        if (!_isDragging)
         {
-            _rb.velocity -= _slowSpeedV2 * Time.deltaTime;
+            _rb.isKinematic = false;
+            _rb.velocity *= 0.95f;
         }
-        else
+        
+        if (_rb.velocity.magnitude <= 0.3)
         {
             _rb.velocity = Vector2.zero;
         }
-        
     }
 }

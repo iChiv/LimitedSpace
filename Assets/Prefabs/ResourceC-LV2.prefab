@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6515711299498556039}
   m_Layer: 0
   m_Name: ResourceC-LV2
-  m_TagString: ResourceTypeB
+  m_TagString: ResourceTypeC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,7 +102,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0.3
-  m_AngularDrag: 0.3
+  m_AngularDrag: 3
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -127,8 +127,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de92476b4284e3f4c939adc00412dc3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slowSpeed: 0
-  slowThreshold: 0
 --- !u!60 &6713452474555074915
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -190,6 +188,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceLevel: 2
-  resourceType: 5
+  resourceType: 0
   detectionRadius: 2
   bigResourcePrefab: {fileID: 4971409039297682687, guid: df2861d4cfbe75c4a83fb742f05cc192, type: 3}
