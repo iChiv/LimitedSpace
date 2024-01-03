@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6713452474555074915}
   - component: {fileID: 6515711299498556039}
   m_Layer: 0
-  m_Name: ResourceC-LV2
+  m_Name: ResourceC-LV3
   m_TagString: ResourceTypeB
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.962, y: -0.484, z: 0}
-  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e79529ecfa83af4fa0a9aeff0c590df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceLevel: 2
-  resourceType: 5
-  detectionRadius: 2
-  bigResourcePrefab: {fileID: 4971409039297682687, guid: df2861d4cfbe75c4a83fb742f05cc192, type: 3}
+  resourceLevel: 3
+  resourceType: 8
+  detectionRadius: 0.1
+  bigResourcePrefab: {fileID: 0}

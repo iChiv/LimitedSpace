@@ -35,6 +35,7 @@ public class ResourcesGenerator : MonoBehaviour
 
         Vector2 spawnPosition = GetRandomPositionInView();
         GameObject newResource =  Instantiate(resourcePrefab, spawnPosition, Quaternion.identity);
+        //need a short animation
         GameObject resourceParent = GameObject.Find("Resources");
         if (resourceParent != null)
         {

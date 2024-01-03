@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6481749554371938392}
   m_Layer: 0
   m_Name: ResourceB
-  m_TagString: Untagged
+  m_TagString: ResourceTypeB
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -206,6 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e79529ecfa83af4fa0a9aeff0c590df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceLevel: 1
   resourceType: 1
-  detectionRadius: 3
+  detectionRadius: 1
   bigResourcePrefab: {fileID: 2034623449153659978, guid: 58e68824dbab9324e9e0e4d002bc6882, type: 3}

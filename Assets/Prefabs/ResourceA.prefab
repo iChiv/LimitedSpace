@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4832844368941779815}
   m_Layer: 0
   m_Name: ResourceA
-  m_TagString: Untagged
+  m_TagString: ResourceTypeA
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -192,7 +192,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de92476b4284e3f4c939adc00412dc3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slowTime: 1
+  slowSpeed: 0
+  slowThreshold: 0
 --- !u!114 &4832844368941779815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,6 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e79529ecfa83af4fa0a9aeff0c590df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceLevel: 1
   resourceType: 0
-  detectionRadius: 3
+  detectionRadius: 1
   bigResourcePrefab: {fileID: 6133147782616586481, guid: 43e313cf710fb3047b07186151d0dfb9, type: 3}

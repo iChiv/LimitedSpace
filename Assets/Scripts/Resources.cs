@@ -11,8 +11,10 @@ public class Resources : MonoBehaviour
         TypeA2, TypeB2, TypeC2,
         TypeA3, TypeB3, TypeC3
     }
+
+    public int resourceLevel;
     public ResourceType resourceType;
-    public float detectionRadius = 3.0f; 
+    public float detectionRadius = 2.0f; 
     public GameObject bigResourcePrefab; 
     
     private void OnMouseUp()
@@ -31,6 +33,7 @@ public class Resources : MonoBehaviour
         
         if (sameTypeResources.Count >= 3)
         {
+            List<GameObject> resourcesToMerge = sameTypeResources.GetRange(0, 3);
             MergeResources(sameTypeResources);
         }
     }
@@ -38,6 +41,7 @@ public class Resources : MonoBehaviour
     private void MergeResources(List<GameObject> resourcesToMerge)
     {
         Instantiate(bigResourcePrefab, transform.position, Quaternion.identity);
+        //animation or VFX?
         
         foreach (var resource in resourcesToMerge)
         {

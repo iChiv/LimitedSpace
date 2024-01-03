@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6631798501034598322}
   - component: {fileID: 6451068876854308965}
   - component: {fileID: 4712320582190517771}
+  - component: {fileID: 2754560598676451194}
   m_Layer: 0
   m_Name: SpaceShip
   m_TagString: Untagged
@@ -99,7 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de92476b4284e3f4c939adc00412dc3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slowTime: 2
+  slowSpeed: 0
+  slowThreshold: 0
 --- !u!60 &6451068876854308965
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -178,3 +180,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &2754560598676451194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2824132153550275730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce7c3d778b09e34f997a4ed664355c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lv1Points: 1
+  lv2Points: 5
+  lv3Points: 30
+  resourceNameTypeA: Square
+  resourceNameTypeB: Circle
+  resourceNameTypeC: Triangle
+  resourceCountTextTypeA: {fileID: 0}
+  resourceCountTextTypeB: {fileID: 0}
+  resourceCountTextTypeC: {fileID: 0}
