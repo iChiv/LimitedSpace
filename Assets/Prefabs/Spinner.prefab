@@ -430,5 +430,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 2
   rotationSpeed: 30
-  health: 3
+  health: 6
   bounceForce: 5

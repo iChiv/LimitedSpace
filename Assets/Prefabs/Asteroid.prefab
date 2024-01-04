@@ -127,9 +127,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e832590752cf51a46bb2f4e870f62638, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 1
   rigidbody: {fileID: 7350545548233662667}
   TorqueMax: 50
-  SpeedMax: 5
+  SpeedMax: 2
   asteroidSprites:
   - {fileID: 21300000, guid: 5341082c7a001344db9a9ae455805bf9, type: 3}
   - {fileID: 21300000, guid: 539f97787648f054db9bbbdf1b1f18ef, type: 3}

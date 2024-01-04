@@ -11,12 +11,6 @@ public class BuildingWall : AsteroidImpact
         hp = health;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     protected override void DestoryObject()
     {
         Destroy(gameObject);
