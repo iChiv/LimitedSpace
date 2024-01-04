@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class Buildings : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    public float placementRadius = 5.0f;
+    
     public int requiredResourceA;
     public int requiredResourceB;
     public int requiredResourceC;
@@ -61,7 +63,14 @@ public class Buildings : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
         worldPosition.z = 0; 
         
-        Instantiate(building, worldPosition, Quaternion.identity);
+        GameObject builtObject = Instantiate(building, worldPosition, Quaternion.identity);
+
+        if (building.CompareTag("Shield") && _spaceShip != null)
+        {
+            builtObject.transform.SetParent(_spaceShip.transform, false);
+            builtObject.transform.localPosition = Vector3.zero;
+        }
+        
         if (_spaceShip != null)
         {
             _spaceShip.resourceCountTypeA -= requiredResourceA;

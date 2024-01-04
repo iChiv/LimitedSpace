@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Resources : MonoBehaviour
+public class Resources : AsteroidImpact
 {
     public enum ResourceType
     {
@@ -12,11 +12,17 @@ public class Resources : MonoBehaviour
         TypeA3, TypeB3, TypeC3
     }
 
+    public float health;
     public int resourceLevel;
     public ResourceType resourceType;
     public float detectionRadius = 2.0f; 
-    public GameObject bigResourcePrefab; 
-    
+    public GameObject bigResourcePrefab;
+
+    private void Start()
+    {
+        hp = health;
+    }
+
     private void OnMouseUp()
     {
         List<GameObject> sameTypeResources = new List<GameObject>();
@@ -50,6 +56,11 @@ public class Resources : MonoBehaviour
                 Destroy(resource);
             }
         }
+        Destroy(gameObject);
+    }
+
+    protected override void DestoryObject()
+    {
         Destroy(gameObject);
     }
 }

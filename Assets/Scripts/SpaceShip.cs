@@ -1,9 +1,12 @@
+using System;
 using UnityEngine;
 using TMPro;
 
 
-public class SpaceShip : MonoBehaviour
+public class SpaceShip : AsteroidImpact
 {
+    public float health;
+    
     [Header("Resource Count")]
     public int resourceCountTypeA = 0;
     public int resourceCountTypeB = 0;
@@ -24,6 +27,11 @@ public class SpaceShip : MonoBehaviour
 
     public Buildings[] buildings;
 
+    private void Start()
+    {
+        hp = health;
+    }
+
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("ResourceTypeA") ||
@@ -40,6 +48,12 @@ public class SpaceShip : MonoBehaviour
             //Cool VFX
             //Maybe Animation
         }
+    }
+    
+    protected override void DestoryObject()
+    {
+        Destroy(gameObject);
+        //Game Over
     }
     
     void AddResource(int level, string resourceType)
@@ -76,7 +90,6 @@ public class SpaceShip : MonoBehaviour
                 t.UpdateResources(resourceCountTypeA,resourceCountTypeB,resourceCountTypeC);
             }
         }
-        
     }
     
     void UpdateResourceCountDisplay(TextMeshProUGUI textMesh, string resourceName, int count)
