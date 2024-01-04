@@ -12,10 +12,6 @@ public class Asteroid : MonoBehaviour
     [Range(0, 5)]
     public float SpeedMax = 5.0f;
 
-    //public float speedMin = 1.0f; 
-    //public float speedMax = 5.0f;
-    //private float speed;
-
     public Sprite[] asteroidSprites;
 
     private Vector2 movementDirection;

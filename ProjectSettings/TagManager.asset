@@ -48,3 +48,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Sprite
+    uniqueID: 2743771891
+    locked: 0
+  - name: VFX
+    uniqueID: 1100013283
+    locked: 0
