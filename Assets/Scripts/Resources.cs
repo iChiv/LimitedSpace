@@ -44,6 +44,11 @@ public class Resources : AsteroidImpact
         }
     }
 
+    private new void OnCollisionEnter2D(Collision2D other)
+    {
+        base.OnCollisionEnter2D(other);
+    }
+
     private void MergeResources(List<GameObject> resourcesToMerge)
     {
         Instantiate(bigResourcePrefab, transform.position, Quaternion.identity);

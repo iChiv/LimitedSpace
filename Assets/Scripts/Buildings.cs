@@ -7,8 +7,6 @@ using UnityEngine.UI;
 
 public class Buildings : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    public float placementRadius = 5.0f;
-    
     public int requiredResourceA;
     public int requiredResourceB;
     public int requiredResourceC;
@@ -22,6 +20,7 @@ public class Buildings : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     private SpaceShip _spaceShip;
     
     public GameObject building;
+    public GameObject uiPanelBuilding;
     
     private Canvas _canvas;
     private RectTransform _rectTransform;
@@ -48,6 +47,7 @@ public class Buildings : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     {
         if (!_canBuild) return;
         _rectTransform.anchoredPosition += eventData.delta / _canvas.scaleFactor;
+        uiPanelBuilding.GetComponent<CanvasGroup>().alpha = 1;
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -69,6 +69,12 @@ public class Buildings : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         {
             builtObject.transform.SetParent(_spaceShip.transform, false);
             builtObject.transform.localPosition = Vector3.zero;
+
+            // BuildingShield newShield = builtObject.GetComponent<BuildingShield>();
+            // if (newShield != null)
+            // {
+            //     newShield.AdjustShieldSize();
+            // }
         }
         
         if (_spaceShip != null)
@@ -90,7 +96,8 @@ public class Buildings : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
     void CanBuildOrNot()
     {
-        if (currentResourceA >= requiredResourceA && currentResourceB >= requiredResourceB &&
+        if (currentResourceA >= requiredResourceA && 
+            currentResourceB >= requiredResourceB &&
             currentResourceC >= requiredResourceC)
         {
             _canBuild = true;

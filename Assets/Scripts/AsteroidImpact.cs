@@ -7,13 +7,12 @@ public abstract class AsteroidImpact : MonoBehaviour
 {
     public float hp;
 
-    void OnCollisionEnter2D(Collision2D other)
+    public void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Asteroid"))
         {
             TakeDamage(1f);
         }
-        Destroy(this);
     }
 
     void TakeDamage(float damage)

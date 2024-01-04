@@ -32,7 +32,7 @@ public class SpaceShip : AsteroidImpact
         hp = health;
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    new void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("ResourceTypeA") ||
             other.gameObject.CompareTag("ResourceTypeB") ||
@@ -48,6 +48,8 @@ public class SpaceShip : AsteroidImpact
             //Cool VFX
             //Maybe Animation
         }
+        
+        base.OnCollisionEnter2D(other);
     }
     
     protected override void DestoryObject()
