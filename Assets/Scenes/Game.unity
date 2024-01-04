@@ -2454,6 +2454,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2636592404017002840, guid: d226709ff42e5814086b2abd39bd854d, type: 3}
+      propertyPath: hp
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3998526867556336162, guid: d226709ff42e5814086b2abd39bd854d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.98
@@ -2510,6 +2514,10 @@ PrefabInstance:
     - target: {fileID: 4971409039297682687, guid: 28e47376ab2e85246afa7c9c649ba5ab, type: 3}
       propertyPath: m_Name
       value: ResourceC
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515711299498556039, guid: 28e47376ab2e85246afa7c9c649ba5ab, type: 3}
+      propertyPath: resourceType
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9045561821195424287, guid: 28e47376ab2e85246afa7c9c649ba5ab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2621,6 +2629,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2754560598676451194, guid: 47dc2969804e5644aaef0c8fccbc2268, type: 3}
+      propertyPath: resourceCountTypeA
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754560598676451194, guid: 47dc2969804e5644aaef0c8fccbc2268, type: 3}
+      propertyPath: resourceCountTypeB
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754560598676451194, guid: 47dc2969804e5644aaef0c8fccbc2268, type: 3}
+      propertyPath: resourceCountTypeC
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 2754560598676451194, guid: 47dc2969804e5644aaef0c8fccbc2268, type: 3}
       propertyPath: resourceCountTextTypeA
       value: 
@@ -2810,6 +2830,10 @@ PrefabInstance:
     - target: {fileID: 2034623449153659978, guid: f0a0acb9f6c4fc343be6046c084bd1de, type: 3}
       propertyPath: m_Name
       value: ResourceB
+      objectReference: {fileID: 0}
+    - target: {fileID: 6481749554371938392, guid: f0a0acb9f6c4fc343be6046c084bd1de, type: 3}
+      propertyPath: resourceType
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

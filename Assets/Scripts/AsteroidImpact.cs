@@ -15,7 +15,7 @@ public abstract class AsteroidImpact : MonoBehaviour
         }
     }
 
-    void TakeDamage(float damage)
+    public void TakeDamage(float damage)
     {
         hp -= damage;
         if (hp <= 0)

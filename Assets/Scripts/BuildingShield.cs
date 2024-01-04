@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BuildingShield : AsteroidImpact
@@ -15,11 +16,17 @@ public class BuildingShield : AsteroidImpact
         hp = health;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Asteroid"))
+        if (other.gameObject.CompareTag("Asteroid"))
         {
-            hp -= 1;
+            Destroy(other.gameObject);
+            hp -= 1f;
+        }
+
+        if (hp <= 0f)
+        {
+            DestoryObject();
         }
     }
 

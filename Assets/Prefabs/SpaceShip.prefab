@@ -337,6 +337,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7322022077167009597}
     m_Modifications:
+    - target: {fileID: -5750895464500492106, guid: 6c559d21cf92be14392eec21f063f89f, type: 3}
+      propertyPath: m_Radius
+      value: 6.13
+      objectReference: {fileID: 0}
+    - target: {fileID: -5750895464500492106, guid: 6c559d21cf92be14392eec21f063f89f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5750895464500492106, guid: 6c559d21cf92be14392eec21f063f89f, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: -5750895464500492106, guid: 6c559d21cf92be14392eec21f063f89f, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 3785169117606678582, guid: 6c559d21cf92be14392eec21f063f89f, type: 3}
       propertyPath: m_Name
       value: Shield
