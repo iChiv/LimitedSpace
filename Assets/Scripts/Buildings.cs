@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,6 +28,8 @@ public class Buildings : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     private CanvasGroup _canvasGroup;
     private Vector2 _originalPos;
 
+    private float _currentRotation = 0f;
+
     private void Awake()
     {
         _spaceShip = FindObjectOfType<SpaceShip>();
@@ -35,6 +38,25 @@ public class Buildings : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         _canvas = GetComponentInParent<Canvas>();
         _originalPos = _rectTransform.anchoredPosition;
         _canvasGroup.alpha = 0.5f;
+    }
+
+    private void Update()
+    {
+        if (_canBuild && Input.GetKeyDown(KeyCode.R))
+        {
+            RotateBuilding();
+        }
+    }
+
+    private void RotateBuilding()
+    {
+        _currentRotation += 90f;
+        if (_currentRotation >= 360f)
+        {
+            _currentRotation = 0f;
+        }
+
+        _rectTransform.localEulerAngles = new Vector3(0, 0, _currentRotation);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -55,7 +77,14 @@ public class Buildings : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         if (!_canBuild) return;
         _canvasGroup.blocksRaycasts = true;
         BuildObject(eventData.position);
+        ResetBuildingPreview();
+    }
+
+    private void ResetBuildingPreview()
+    {
         _rectTransform.anchoredPosition = _originalPos;
+        _rectTransform.localEulerAngles =  Vector3.zero;
+        _currentRotation = 0f;
     }
 
     private void BuildObject(Vector2 screenPosition)
@@ -65,10 +94,12 @@ public class Buildings : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         
         GameObject builtObject = Instantiate(building, worldPosition, Quaternion.identity);
 
+        builtObject.transform.rotation = Quaternion.Euler(0,0,_currentRotation);
+        
         if (building.CompareTag("Shield") && _spaceShip != null)
         {
             builtObject.transform.SetParent(_spaceShip.transform, false);
-            builtObject.transform.localPosition = Vector3.zero;
+            builtObject.transform.localPosition = new Vector3(0, -0.6f,0);
 
             // BuildingShield newShield = builtObject.GetComponent<BuildingShield>();
             // if (newShield != null)
