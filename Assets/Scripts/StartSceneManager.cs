@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,13 +7,24 @@ using UnityEngine.SceneManagement;
 public class StartSceneManager : MonoBehaviour
 {
     public STARTPosition[] letters; // 字母脚本的数组
-    public int nextSceneIndex = 1; // 要加载的下一个场景的名称
+    private int _nextSceneIndex;
+
+    public CanvasGroup fadePanel;
+    public float fadeTime = 1f;
+    private bool _isTransitioning = false;
+
+    private void Start()
+    {
+        int activeScene = SceneManager.GetActiveScene().buildIndex;
+        _nextSceneIndex = activeScene + 1 ;
+    }
 
     void Update()
     {
-        if (AreAllLettersInPlace())
+        if (AreAllLettersInPlace() && !_isTransitioning)
         {
-            SceneManager.LoadScene(nextSceneIndex); // 加载下一个场景
+            StartCoroutine(FadeAndLoadScene());
+            _isTransitioning = true;
         }
     }
 
@@ -26,5 +38,18 @@ public class StartSceneManager : MonoBehaviour
             }
         }
         return true; // 所有字母都在目标位置
+    }
+
+    IEnumerator FadeAndLoadScene()
+    {
+        float elapsed = 0f;
+        while (elapsed < fadeTime)
+        {
+            elapsed += Time.deltaTime;
+            fadePanel.alpha = Mathf.Clamp01(elapsed / fadeTime);
+            yield return null;
+        }
+
+        SceneManager.LoadScene(_nextSceneIndex);
     }
 }

@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class AsteroidGenerater : MonoBehaviour
 {
@@ -8,15 +11,34 @@ public class AsteroidGenerater : MonoBehaviour
 
     [Range(0.01f,5)]
     public float spawnInterval = 1f;
+    
+    public float minimumSpawnInterval = 1f;
+    public float decreaseRate = 0.01f;
+
+    private float _nextSpawnTime;
 
 
     void Start()
     {
-        InvokeRepeating("SpawnAsteroid", spawnInterval, spawnInterval);
-
+        // InvokeRepeating("SpawnAsteroid", spawnInterval, spawnInterval);
+        _nextSpawnTime = Time.time + spawnInterval;
     }
 
-    
+    private void Update()
+    {
+        if (Time.time >= _nextSpawnTime)
+        {
+            SpawnAsteroid();
+            _nextSpawnTime = Time.time + spawnInterval;
+            if (spawnInterval > minimumSpawnInterval)
+            {
+                spawnInterval -= decreaseRate * Time.deltaTime;
+                spawnInterval = Mathf.Max(spawnInterval, minimumSpawnInterval);
+            }
+        }
+    }
+
+
     void SpawnAsteroid()
     {
         Vector3 spawnPosition = GetRandomSpawnPositionOutsideCameraView();

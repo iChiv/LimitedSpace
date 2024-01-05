@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
@@ -28,6 +29,9 @@ public class SpaceShip : AsteroidImpact
 
     public Buildings[] buildings;
     public GameObject explosionVFX;
+
+    public CanvasGroup fadePanel;
+    public float fadeTime = 1f;
 
     private void Start()
     {
@@ -60,9 +64,20 @@ public class SpaceShip : AsteroidImpact
         {
             Instantiate(explosionVFX, transform.position, Quaternion.identity);
         }
-        Invoke(nameof(GameOver),1f);
+        StartCoroutine(FadeOutAndGameOver());
         Destroy(gameObject,2f);
-        
+    }
+    
+    IEnumerator FadeOutAndGameOver()
+    {
+        float elapsed = 0f;
+        while (elapsed < fadeTime)
+        {
+            elapsed += Time.deltaTime;
+            fadePanel.alpha = Mathf.Clamp01(elapsed / fadeTime);
+            yield return null;
+        }
+        Invoke(nameof(GameOver),1f);
     }
     
     void AddResource(int level, string resourceType)

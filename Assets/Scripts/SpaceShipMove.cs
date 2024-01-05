@@ -9,6 +9,7 @@ public class SpaceShipMove : MonoBehaviour
     public float moveSpeed = 10f;
     public float turnSpeed = 300f;
     public float maxAngularVelocity = 100.0f;
+    public GameObject engineFire;
     private Rigidbody2D _rb;
 
     private float _currentSpeed;
@@ -39,6 +40,11 @@ public class SpaceShipMove : MonoBehaviour
         if (speedY != 0)
         {
             _rb.AddForce(transform.up * speedY * moveSpeed);
+            engineFire.SetActive(true);
+        }
+        else
+        {
+            engineFire.SetActive(false);
         }
         
         _rb.angularVelocity = Mathf.Clamp(_rb.angularVelocity, -maxAngularVelocity, maxAngularVelocity);

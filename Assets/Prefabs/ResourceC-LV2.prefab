@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
-  health: 0
+  health: 1
   resourceLevel: 2
   resourceType: 5
   detectionRadius: 2
