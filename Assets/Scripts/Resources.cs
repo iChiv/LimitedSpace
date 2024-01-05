@@ -37,9 +37,9 @@ public class Resources : AsteroidImpact
             }
         }
         
-        if (sameTypeResources.Count >= 3)
+        if (sameTypeResources.Count >= 2)
         {
-            List<GameObject> resourcesToMerge = sameTypeResources.GetRange(0, 3);
+            List<GameObject> resourcesToMerge = sameTypeResources.GetRange(0, 2);
             MergeResources(sameTypeResources);
         }
     }
