@@ -55,7 +55,7 @@ public class SpaceShip : AsteroidImpact
     protected override void DestoryObject()
     {
         Destroy(gameObject);
-        //Game Over
+        GameOver();
     }
     
     void AddResource(int level, string resourceType)
@@ -72,17 +72,17 @@ public class SpaceShip : AsteroidImpact
         if (resourceType == "ResourceTypeA")
         {
             resourceCountTypeA += points;
-            UpdateResourceCountDisplay(resourceCountTextTypeA, resourceNameTypeA, resourceCountTypeA);
+            UpdateResourceCountDisplay(resourceCountTextTypeA, resourceCountTypeA);
         }
         else if (resourceType == "ResourceTypeB")
         {
             resourceCountTypeB += points;
-            UpdateResourceCountDisplay(resourceCountTextTypeB, resourceNameTypeB, resourceCountTypeB);
+            UpdateResourceCountDisplay(resourceCountTextTypeB, resourceCountTypeB);
         }
         else if (resourceType == "ResourceTypeC")
         {
             resourceCountTypeC += points;
-            UpdateResourceCountDisplay(resourceCountTextTypeC, resourceNameTypeC, resourceCountTypeC);
+            UpdateResourceCountDisplay(resourceCountTextTypeC, resourceCountTypeC);
         }
 
         foreach (var t in buildings)
@@ -94,25 +94,42 @@ public class SpaceShip : AsteroidImpact
         }
     }
     
-    void UpdateResourceCountDisplay(TextMeshProUGUI textMesh, string resourceName, int count)
+    void UpdateResourceCountDisplay(TextMeshProUGUI textMesh, int count)
     {
         if (textMesh != null)
         {
-            textMesh.text = $"{resourceName}: {count}";
+            textMesh.text = count.ToString();
         }
     }
 
     public void ResourceConsume()
     {
-        UpdateResourceCountDisplay(resourceCountTextTypeA, resourceNameTypeA, resourceCountTypeA);
-        UpdateResourceCountDisplay(resourceCountTextTypeB, resourceNameTypeB, resourceCountTypeB);
-        UpdateResourceCountDisplay(resourceCountTextTypeC, resourceNameTypeC, resourceCountTypeC);
+        UpdateResourceCountDisplay(resourceCountTextTypeA, resourceCountTypeA);
+        UpdateResourceCountDisplay(resourceCountTextTypeB, resourceCountTypeB);
+        UpdateResourceCountDisplay(resourceCountTextTypeC, resourceCountTypeC);
         foreach (var t in buildings)
         {
             if (t != null)
             {
                 t.UpdateResources(resourceCountTypeA,resourceCountTypeB,resourceCountTypeC);
             }
+        }
+    }
+
+    public int CalculateScore()
+    {
+        return resourceCountTypeA + resourceCountTypeB + resourceCountTypeC;
+    }
+
+    void GameOver()
+    {
+        int totalScore = CalculateScore();
+        int highScore = PlayerPrefs.GetInt("HighScore", 0);
+
+        if (totalScore > highScore)
+        {
+            PlayerPrefs.SetInt("HighScore", totalScore);
+            PlayerPrefs.Save();
         }
     }
 }
