@@ -140,6 +140,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 7ba2e546586a4b14b9cfac5905768d9a, type: 3}
   - {fileID: 21300000, guid: f766e4b0503f33f46bd055aa6f8f01e0, type: 3}
   - {fileID: 21300000, guid: eb0121102f3bab444a122dab764e0a4b, type: 3}
+  - {fileID: 21300000, guid: 9498f8a65c4ad3949be801823df259e6, type: 3}
+  - {fileID: 21300000, guid: f12be24b7f928e3419b45d7a73445c76, type: 3}
+  - {fileID: 21300000, guid: 3f0fe632a879b1245a12fd20befebd7c, type: 3}
   centerAreaPoint: {x: 0, y: 0, z: 0}
 --- !u!60 &-8763133705341968129
 PolygonCollider2D:

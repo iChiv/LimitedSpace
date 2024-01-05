@@ -13,7 +13,7 @@ public class AsteroidGenerater : MonoBehaviour
     public float spawnInterval = 1f;
     
     public float minimumSpawnInterval = 1f;
-    public float decreaseRate = 0.01f;
+    public float decreaseRate = 0.1f;
 
     private float _nextSpawnTime;
 
