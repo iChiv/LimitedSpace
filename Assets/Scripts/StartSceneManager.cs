@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 public class StartSceneManager : MonoBehaviour
 {
     public STARTPosition[] letters; // 字母脚本的数组
-    public string nextSceneName = "Game"; // 要加载的下一个场景的名称
+    public int nextSceneIndex = 1; // 要加载的下一个场景的名称
 
     void Update()
     {
         if (AreAllLettersInPlace())
         {
-            SceneManager.LoadScene(nextSceneName); // 加载下一个场景
+            SceneManager.LoadScene(nextSceneIndex); // 加载下一个场景
         }
     }
 
