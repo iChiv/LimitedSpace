@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 public class SpaceShip : AsteroidImpact
@@ -26,6 +27,7 @@ public class SpaceShip : AsteroidImpact
     public TextMeshProUGUI resourceCountTextTypeC;
 
     public Buildings[] buildings;
+    public GameObject explosionVFX;
 
     private void Start()
     {
@@ -54,8 +56,13 @@ public class SpaceShip : AsteroidImpact
     
     protected override void DestoryObject()
     {
-        Destroy(gameObject);
-        GameOver();
+        if (explosionVFX != null)
+        {
+            Instantiate(explosionVFX, transform.position, Quaternion.identity);
+        }
+        Invoke(nameof(GameOver),1f);
+        Destroy(gameObject,2f);
+        
     }
     
     void AddResource(int level, string resourceType)
@@ -131,5 +138,6 @@ public class SpaceShip : AsteroidImpact
             PlayerPrefs.SetInt("HighScore", totalScore);
             PlayerPrefs.Save();
         }
+        SceneManager.LoadScene("End");
     }
 }

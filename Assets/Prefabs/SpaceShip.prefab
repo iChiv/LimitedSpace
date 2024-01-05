@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de92476b4284e3f4c939adc00412dc3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isDragging: 0
 --- !u!60 &6451068876854308965
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -313,7 +314,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
+  explosionVFX: {fileID: 3445041688191113288, guid: bd6797cd97f4942d188e008be3eef5a2, type: 3}
 --- !u!114 &2192085155547486117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,7 +364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4487856605141884571, guid: 6c559d21cf92be14392eec21f063f89f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.61
       objectReference: {fileID: 0}
     - target: {fileID: 4487856605141884571, guid: 6c559d21cf92be14392eec21f063f89f, type: 3}
       propertyPath: m_LocalPosition.z
