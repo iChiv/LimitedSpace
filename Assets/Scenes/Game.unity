@@ -1854,8 +1854,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requiredResourceA: 6
-  requiredResourceB: 12
-  requiredResourceC: 9
+  requiredResourceB: 0
+  requiredResourceC: 3
   currentResourceA: 0
   currentResourceB: 0
   currentResourceC: 0
@@ -2814,8 +2814,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requiredResourceA: 6
-  requiredResourceB: 0
-  requiredResourceC: 3
+  requiredResourceB: 12
+  requiredResourceC: 9
   currentResourceA: 0
   currentResourceB: 0
   currentResourceC: 0
