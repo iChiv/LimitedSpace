@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DragMove : MonoBehaviour
 {
-    private bool _isDragging = false;
+    [HideInInspector]public bool _isDragging = false;
     private Vector2 _initialMousePosition;
     private Vector3 _initialObjectPosition;
     private Rigidbody2D _rb;

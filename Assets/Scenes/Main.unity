@@ -1176,7 +1176,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5918f8e82ae96b45bdc993ffc776e7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placementRadius: 5
   requiredResourceA: 10
   requiredResourceB: 10
   requiredResourceC: 10
@@ -1184,6 +1183,7 @@ MonoBehaviour:
   currentResourceB: 0
   currentResourceC: 0
   building: {fileID: 8250918427819412021, guid: 624a0e5eef98b1a46b2cd4f41e4c2e7e, type: 3}
+  uiPanelBuilding: {fileID: 0}
 --- !u!114 &1441179809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1715,7 +1715,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5918f8e82ae96b45bdc993ffc776e7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placementRadius: 5
   requiredResourceA: 5
   requiredResourceB: 5
   requiredResourceC: 5
@@ -1723,6 +1722,7 @@ MonoBehaviour:
   currentResourceB: 0
   currentResourceC: 0
   building: {fileID: 8250918427819412021, guid: 624a0e5eef98b1a46b2cd4f41e4c2e7e, type: 3}
+  uiPanelBuilding: {fileID: 0}
 --- !u!114 &1718033502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2012,7 +2012,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5918f8e82ae96b45bdc993ffc776e7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placementRadius: 5
   requiredResourceA: 1
   requiredResourceB: 1
   requiredResourceC: 1
@@ -2020,6 +2019,7 @@ MonoBehaviour:
   currentResourceB: 0
   currentResourceC: 0
   building: {fileID: 8250918427819412021, guid: 624a0e5eef98b1a46b2cd4f41e4c2e7e, type: 3}
+  uiPanelBuilding: {fileID: 0}
 --- !u!114 &2005790063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2326,6 +2326,10 @@ PrefabInstance:
     - target: {fileID: 2824132153550275730, guid: 47dc2969804e5644aaef0c8fccbc2268, type: 3}
       propertyPath: m_Name
       value: SpaceShip
+      objectReference: {fileID: 0}
+    - target: {fileID: 6631798501034598322, guid: 47dc2969804e5644aaef0c8fccbc2268, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7322022077167009597, guid: 47dc2969804e5644aaef0c8fccbc2268, type: 3}
       propertyPath: m_LocalPosition.x
