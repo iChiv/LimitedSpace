@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
@@ -11,6 +12,11 @@ public class Buildings : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     public int requiredResourceA;
     public int requiredResourceB;
     public int requiredResourceC;
+
+    public TextMeshProUGUI textResourceA;
+    public TextMeshProUGUI textResourceB;
+    public TextMeshProUGUI textResourceC;
+    public int consumeResourceIncrease = 2;
 
     [SerializeField] private int currentResourceA;
     [SerializeField] private int currentResourceB;
@@ -115,6 +121,12 @@ public class Buildings : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             _spaceShip.resourceCountTypeC -= requiredResourceC;
             _spaceShip.ResourceConsume();
         }
+
+        requiredResourceA *= consumeResourceIncrease;
+        requiredResourceB *= consumeResourceIncrease;
+        requiredResourceC *= consumeResourceIncrease;
+        
+        UpdateResourceTexts();
     }
 
     public void UpdateResources(int resourceTypeA, int resourceTypeB, int resourceTypeC)
@@ -123,6 +135,17 @@ public class Buildings : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         currentResourceB = resourceTypeB;
         currentResourceC = resourceTypeC;
         CanBuildOrNot();
+        UpdateResourceTexts();
+    }
+
+    private void UpdateResourceTexts()
+    {
+        if (textResourceA != null)
+            textResourceA.text = requiredResourceA.ToString();
+        if (textResourceB != null)
+            textResourceB.text = requiredResourceB.ToString();
+        if (textResourceC != null)
+            textResourceC.text = requiredResourceC.ToString();
     }
 
     void CanBuildOrNot()
