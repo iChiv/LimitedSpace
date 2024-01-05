@@ -10,6 +10,8 @@ public class DragMove : MonoBehaviour
     private Vector3 _initialObjectPosition;
     private Rigidbody2D _rb;
 
+    public AudioClip pickUp;
+
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -24,6 +26,10 @@ public class DragMove : MonoBehaviour
 
             if (hit.collider != null && hit.collider.gameObject == gameObject)
             {
+                if (pickUp != null)
+                {
+                    AudioSource.PlayClipAtPoint(pickUp,transform.position,1f);
+                }
                 _isDragging = true;
                 _initialMousePosition = mousePosition;
                 _initialObjectPosition = transform.position;

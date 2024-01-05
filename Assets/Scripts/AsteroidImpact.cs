@@ -6,6 +6,9 @@ using UnityEngine;
 public abstract class AsteroidImpact : MonoBehaviour
 {
     public float hp;
+    public GameObject destructionVFX;
+    public AudioClip destructionSound;
+    public float volume = 1f; 
 
     public void OnCollisionEnter2D(Collision2D other)
     {
@@ -24,6 +27,19 @@ public abstract class AsteroidImpact : MonoBehaviour
         }
     }
 
-    protected abstract void DestoryObject();
+    protected virtual void DestoryObject()
+    {
+        // 播放音效
+        if (destructionSound != null)
+        {
+            AudioSource.PlayClipAtPoint(destructionSound, transform.position, volume);
+        }
+
+        // 生成特效
+        if (destructionVFX != null)
+        {
+            Instantiate(destructionVFX, transform.position, Quaternion.identity);
+        }
+    }
 
 }

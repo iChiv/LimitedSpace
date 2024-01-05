@@ -9,6 +9,7 @@ public class SpaceShip : AsteroidImpact
 {
     public float health;
     
+    
     [Header("Resource Count")]
     public int resourceCountTypeA = 0;
     public int resourceCountTypeB = 0;
@@ -29,6 +30,8 @@ public class SpaceShip : AsteroidImpact
 
     public Buildings[] buildings;
     public GameObject explosionVFX;
+    public AudioClip spaceshipExplosion;
+    public AudioClip collectSound;
 
     public CanvasGroup fadePanel;
     public float fadeTime = 1f;
@@ -50,9 +53,6 @@ public class SpaceShip : AsteroidImpact
                 AddResource(resources.resourceLevel, other.gameObject.tag);
             }
             Destroy(other.gameObject);
-            //Play some sound
-            //Cool VFX
-            //Maybe Animation
         }
         
         base.OnCollisionEnter2D(other);
@@ -63,6 +63,11 @@ public class SpaceShip : AsteroidImpact
         if (explosionVFX != null)
         {
             Instantiate(explosionVFX, transform.position, Quaternion.identity);
+        }
+
+        if (spaceshipExplosion != null)
+        {
+            AudioSource.PlayClipAtPoint(spaceshipExplosion, transform.position, volume);
         }
         StartCoroutine(FadeOutAndGameOver());
         Destroy(gameObject,2f);
@@ -82,6 +87,11 @@ public class SpaceShip : AsteroidImpact
     
     void AddResource(int level, string resourceType)
     {
+        if (collectSound != null)
+        {
+            AudioSource.PlayClipAtPoint(collectSound, transform.position, volume);
+        }
+        
         int points = 0;
         switch (level)
         {
@@ -153,6 +163,7 @@ public class SpaceShip : AsteroidImpact
             PlayerPrefs.SetInt("HighScore", totalScore);
             PlayerPrefs.Save();
         }
+        
         SceneManager.LoadScene("End");
     }
 }

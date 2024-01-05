@@ -9,6 +9,7 @@ public class BuildingShield : AsteroidImpact
     public float health;
     public SpaceShip spaceShip;
     public BuildingShield[] existingShields;
+    public AudioClip shieldBroken;
 
     private void Start()
     {
@@ -22,6 +23,16 @@ public class BuildingShield : AsteroidImpact
         {
             Destroy(other.gameObject);
             hp -= 1f;
+            if (destructionSound != null)
+            {
+                AudioSource.PlayClipAtPoint(destructionSound, other.transform.position, volume);
+            }
+
+            // 生成特效
+            if (destructionVFX != null)
+            {
+                Instantiate(destructionVFX, other.transform.position, Quaternion.identity);
+            }
         }
 
         if (hp <= 0f)
@@ -30,6 +41,7 @@ public class BuildingShield : AsteroidImpact
         }
     }
 
+    //not working
     public void AdjustShieldSize()
     {
         existingShields = spaceShip.GetComponentsInChildren<BuildingShield>(true);
@@ -50,6 +62,10 @@ public class BuildingShield : AsteroidImpact
 
     protected override void DestoryObject()
     {
+        if (shieldBroken != null)
+        {
+            AudioSource.PlayClipAtPoint(shieldBroken, transform.position, volume);
+        }
         Destroy(gameObject);
     }
 }

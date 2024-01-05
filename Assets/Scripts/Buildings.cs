@@ -138,6 +138,6 @@ public class Buildings : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             _canBuild = false;
         }
 
-        _canvasGroup.alpha = _canBuild ? 1.0f : 0.5f;
+        _canvasGroup.alpha = _canBuild ? 1.0f : 0.2f;
     }
 }

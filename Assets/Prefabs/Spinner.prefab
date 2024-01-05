@@ -428,7 +428,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11e508e139a5ce141a75a502194a064a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 2
+  hp: 5
+  destructionVFX: {fileID: 0}
+  destructionSound: {fileID: 0}
+  volume: 1
   rotationSpeed: 30
   health: 6
   bounceForce: 5

@@ -98,10 +98,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d9698b9612ea24eae07a13ca3f155c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 0
+  hp: 2
+  destructionVFX: {fileID: 3445041688191113288, guid: 667e556e9af363548802b4b90a5ef86d, type: 3}
+  destructionSound: {fileID: 8300000, guid: 3f095f640d5205346844b3baeb0a9f17, type: 3}
+  volume: 1
   health: 2
   spaceShip: {fileID: 0}
   existingShields: []
+  shieldBroken: {fileID: 8300000, guid: 50291ef716946154b877f72559d0d22b, type: 3}
 --- !u!58 &-5750895464500492106
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isDragging: 0
+  pickUp: {fileID: 8300000, guid: 6ea8187e3bb96784c8fbfd193ea3cead, type: 3}
 --- !u!60 &6713452474555074915
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -200,9 +201,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e79529ecfa83af4fa0a9aeff0c590df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 0
+  hp: 1
+  destructionVFX: {fileID: 0}
+  destructionSound: {fileID: 0}
+  volume: 1
   health: 1
   resourceLevel: 1
   resourceType: 2
   detectionRadius: 1
   bigResourcePrefab: {fileID: 4971409039297682687, guid: 7a7fb0359f629434fb452fff7d32a7e7, type: 3}
+  mergeSound: {fileID: 8300000, guid: ef50da98c03a32a438b5eb2dfa29cf88, type: 3}

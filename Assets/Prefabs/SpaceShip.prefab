@@ -223,6 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isDragging: 0
+  pickUp: {fileID: 0}
 --- !u!60 &6451068876854308965
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -417,6 +418,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
+  destructionVFX: {fileID: 0}
+  destructionSound: {fileID: 0}
+  volume: 1
   health: 1
   resourceCountTypeA: 0
   resourceCountTypeB: 0
@@ -435,6 +439,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   explosionVFX: {fileID: 3445041688191113288, guid: bd6797cd97f4942d188e008be3eef5a2, type: 3}
+  spaceshipExplosion: {fileID: 8300000, guid: 85100cf788f0de24e84d91e731863fd2, type: 3}
+  collectSound: {fileID: 8300000, guid: 081f169307013ec40a81fb3d342d26f8, type: 3}
+  fadePanel: {fileID: 0}
+  fadeTime: 1
 --- !u!114 &2192085155547486117
 MonoBehaviour:
   m_ObjectHideFlags: 0

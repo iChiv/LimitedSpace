@@ -171,5 +171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cdcdbaddf206624484b385b540ade8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 0
+  hp: 3
+  destructionVFX: {fileID: 0}
+  destructionSound: {fileID: 0}
+  volume: 0.5
   health: 3

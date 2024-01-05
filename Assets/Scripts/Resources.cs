@@ -17,6 +17,8 @@ public class Resources : AsteroidImpact
     public ResourceType resourceType;
     public float detectionRadius = 2.0f; 
     public GameObject bigResourcePrefab;
+    
+    public AudioClip mergeSound;
 
     private void Start()
     {
@@ -47,7 +49,10 @@ public class Resources : AsteroidImpact
     private void MergeResources(List<GameObject> resourcesToMerge)
     {
         Instantiate(bigResourcePrefab, transform.position, Quaternion.identity);
-        //animation or VFX?
+        if (mergeSound != null)
+        {
+            AudioSource.PlayClipAtPoint(mergeSound, transform.position, volume);
+        }
         
         foreach (var resource in resourcesToMerge)
         {
@@ -61,6 +66,7 @@ public class Resources : AsteroidImpact
 
     protected override void DestoryObject()
     {
+        base.DestoryObject();
         Destroy(gameObject);
     }
 }

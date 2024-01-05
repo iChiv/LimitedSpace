@@ -179,6 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isDragging: 0
+  pickUp: {fileID: 8300000, guid: 6ea8187e3bb96784c8fbfd193ea3cead, type: 3}
 --- !u!114 &-2943437358937495618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,8 +193,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
+  destructionVFX: {fileID: 0}
+  destructionSound: {fileID: 0}
+  volume: 1
   health: 1
   resourceLevel: 2
   resourceType: 3
   detectionRadius: 2
   bigResourcePrefab: {fileID: 6133147782616586481, guid: 766c1a1c94a02b5468f2f382e624bb1a, type: 3}
+  mergeSound: {fileID: 8300000, guid: ef50da98c03a32a438b5eb2dfa29cf88, type: 3}
