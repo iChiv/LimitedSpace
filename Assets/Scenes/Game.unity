@@ -749,7 +749,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -106, y: -152}
+  m_AnchoredPosition: {x: -106, y: -80}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &423836112
@@ -1854,8 +1854,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requiredResourceA: 6
-  requiredResourceB: 12
-  requiredResourceC: 9
+  requiredResourceB: 0
+  requiredResourceC: 3
   currentResourceA: 0
   currentResourceB: 0
   currentResourceC: 0
@@ -2733,7 +2733,7 @@ MonoBehaviour:
   asteroidPrefab: {fileID: 2509817195473835411, guid: d226709ff42e5814086b2abd39bd854d, type: 3}
   spawnInterval: 5
   minimumSpawnInterval: 1
-  decreaseRate: 0.1
+  decreaseRate: 0.02
 --- !u!4 &1684847532
 Transform:
   m_ObjectHideFlags: 0
@@ -2814,8 +2814,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requiredResourceA: 6
-  requiredResourceB: 0
-  requiredResourceC: 3
+  requiredResourceB: 12
+  requiredResourceC: 9
   currentResourceA: 0
   currentResourceB: 0
   currentResourceC: 0
