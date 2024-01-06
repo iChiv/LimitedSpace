@@ -18,17 +18,39 @@ public class ResourcesGenerator : MonoBehaviour
 
     private float _timeSinceStart;
 
-    void Start()
+    public int objectsCount;
+
+    public int GetObjectsCountInLayer(int layer)
     {
+        GameObject[] allObjects = FindObjectsOfType<GameObject>();
+        int count = 0;
+
+        foreach (var obj in allObjects)
+        {
+            if (obj.layer == layer)
+            {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+    void Start()
+    { 
         _mainCamera = Camera.main;
         _timer = spawnInterval;
     }
 
     void Update()
     {
+        int layer = LayerMask.NameToLayer("Resources");
+        objectsCount = GetObjectsCountInLayer(layer);
+        Debug.Log("Number of objects in layer " + LayerMask.LayerToName(layer) + ": " + objectsCount);
+
         _timeSinceStart += Time.deltaTime;
         _timer -= Time.deltaTime;
-        if (_timer <= 0)
+        if (_timer <= 0 && objectsCount< 20)
         {
             SpawnResource();
             _timer = Mathf.Max(minimumSpawnInterval,spawnInterval - _timeSinceStart * intervalDecrease);
