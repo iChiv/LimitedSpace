@@ -47,7 +47,7 @@ public class Buildings : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         _canvasGroup = GetComponent<CanvasGroup>();
         _canvas = GetComponentInParent<Canvas>();
         _originalPos = _rectTransform.anchoredPosition;
-        _canvasGroup.alpha = 0.5f;
+        // _canvasGroup.alpha = 0.5f;
     }
 
     private void Update()
@@ -100,37 +100,46 @@ public class Buildings : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     private void BuildObject(Vector2 screenPosition)
     {
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
-        worldPosition.z = 0; 
-        
-        GameObject builtObject = Instantiate(building, worldPosition, Quaternion.identity);
+        worldPosition.z = 0;
 
-        builtObject.transform.rotation = Quaternion.Euler(0,0,_currentRotation);
-        
-        if (building.CompareTag("Shield") && _spaceShip != null)
+        if (CanPlaceOrNot(worldPosition))
         {
-            builtObject.transform.SetParent(_spaceShip.transform, false);
-            builtObject.transform.localPosition = new Vector3(0, -0.6f,0);
+            GameObject builtObject = Instantiate(building, worldPosition, Quaternion.identity);
 
-            // BuildingShield newShield = builtObject.GetComponent<BuildingShield>();
-            // if (newShield != null)
-            // {
-            //     newShield.AdjustShieldSize();
-            // }
-        }
+            builtObject.transform.rotation = Quaternion.Euler(0,0,_currentRotation);
         
-        if (_spaceShip != null)
+            if (building.CompareTag("Shield") && _spaceShip != null)
+            {
+                builtObject.transform.SetParent(_spaceShip.transform, false);
+                builtObject.transform.localPosition = new Vector3(0, -0.6f,0);
+
+                // BuildingShield newShield = builtObject.GetComponent<BuildingShield>();
+                // if (newShield != null)
+                // {
+                //     newShield.AdjustShieldSize();
+                // }
+            }
+        
+            if (_spaceShip != null)
+            {
+                _spaceShip.resourceCountTypeA -= requiredResourceA;
+                _spaceShip.resourceCountTypeB -= requiredResourceB;
+                _spaceShip.resourceCountTypeC -= requiredResourceC;
+                _spaceShip.ResourceConsume();
+            }
+
+            requiredResourceA = requiredResourceA < 32 ? Mathf.FloorToInt(requiredResourceA * consumeResourceIncrease) : 32;
+            requiredResourceB = requiredResourceB < 24 ? Mathf.FloorToInt(requiredResourceB * consumeResourceIncrease) : 24;
+            requiredResourceC = requiredResourceC < 32 ? Mathf.FloorToInt(requiredResourceC * consumeResourceIncrease) : 32;
+            
+        
+            UpdateResourceTexts();
+        }
+        else
         {
-            _spaceShip.resourceCountTypeA -= requiredResourceA;
-            _spaceShip.resourceCountTypeB -= requiredResourceB;
-            _spaceShip.resourceCountTypeC -= requiredResourceC;
-            _spaceShip.ResourceConsume();
+                // 如果不能建造，重置UI位置
+                ResetBuildingPreview();
         }
-
-        requiredResourceA = Mathf.FloorToInt(requiredResourceA * consumeResourceIncrease);
-        requiredResourceB = Mathf.FloorToInt(requiredResourceB * consumeResourceIncrease);
-        requiredResourceC = Mathf.FloorToInt(requiredResourceC * consumeResourceIncrease);
-        
-        UpdateResourceTexts();
     }
 
     public void UpdateResources(int resourceTypeA, int resourceTypeB, int resourceTypeC)
@@ -165,7 +174,9 @@ public class Buildings : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             _canBuild = false;
         }
 
-        _canvasGroup.alpha = _canBuild ? 1.0f : 0.2f;
+        _canvasGroup.alpha = _canBuild ? 1.0f : 0.1f;
+        
+        
         if (resourceADisplay != null)
         {
             resourceADisplay.alpha = _canBuild ? 1.0f : 0.2f;
@@ -178,6 +189,12 @@ public class Buildings : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         {
             resourceCDisplay.alpha = _canBuild ? 1.0f : 0.2f;
         }
-        
+    }
+
+    private bool CanPlaceOrNot(Vector3 position)
+    {
+        float checkRadius = 0.5f;
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(position, checkRadius, LayerMask.GetMask("Building"));
+        return colliders.Length == 0;
     }
 }
