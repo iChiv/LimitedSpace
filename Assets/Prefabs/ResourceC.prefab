@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2420634195694274512}
   - component: {fileID: 7703024325922563110}
   - component: {fileID: 9063979817653623345}
-  - component: {fileID: 6713452474555074915}
   - component: {fileID: 6515711299498556039}
+  - component: {fileID: 3600897137228865870}
   m_Layer: 7
   m_Name: ResourceC
   m_TagString: ResourceTypeC
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.962, y: -0.484, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -132,8 +132,30 @@ MonoBehaviour:
   buildingleLayer:
     serializedVersion: 2
     m_Bits: 512
---- !u!60 &6713452474555074915
-PolygonCollider2D:
+--- !u!114 &6515711299498556039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4971409039297682687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e79529ecfa83af4fa0a9aeff0c590df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 1
+  destructionVFX: {fileID: 0}
+  destructionSound: {fileID: 0}
+  volume: 1
+  health: 1
+  resourceLevel: 1
+  resourceType: 2
+  detectionRadius: 1
+  bigResourcePrefab: {fileID: 4971409039297682687, guid: 7a7fb0359f629434fb452fff7d32a7e7, type: 3}
+  mergeSound: {fileID: 8300000, guid: ef50da98c03a32a438b5eb2dfa29cf88, type: 3}
+--- !u!58 &3600897137228865870
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -164,53 +186,6 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.44, y: 1.3}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 1
-  m_Points:
-    m_Paths:
-    - - {x: 0.37, y: -0.08}
-      - {x: 0.26, y: 0.11}
-      - {x: 0.049999997, y: 0.47}
-      - {x: 0.02, y: 0.51}
-      - {x: -0.01, y: 0.51}
-      - {x: -0.04, y: 0.5}
-      - {x: -0.12, y: 0.35}
-      - {x: -0.29999998, y: 0.04}
-      - {x: -0.55, y: -0.39}
-      - {x: -0.59, y: -0.48}
-      - {x: -0.57, y: -0.5}
-      - {x: 0.57, y: -0.5}
-      - {x: 0.59, y: -0.48}
-      - {x: 0.55, y: -0.39}
-      - {x: 0.44, y: -0.19999999}
-  m_UseDelaunayMesh: 0
---- !u!114 &6515711299498556039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4971409039297682687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e79529ecfa83af4fa0a9aeff0c590df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 1
-  destructionVFX: {fileID: 0}
-  destructionSound: {fileID: 0}
-  volume: 1
-  health: 1
-  resourceLevel: 1
-  resourceType: 2
-  detectionRadius: 1
-  bigResourcePrefab: {fileID: 4971409039297682687, guid: 7a7fb0359f629434fb452fff7d32a7e7, type: 3}
-  mergeSound: {fileID: 8300000, guid: ef50da98c03a32a438b5eb2dfa29cf88, type: 3}
+  m_Offset: {x: 0, y: -0.09794642}
+  serializedVersion: 2
+  m_Radius: 0.81794643
