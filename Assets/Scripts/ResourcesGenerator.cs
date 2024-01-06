@@ -5,12 +5,18 @@ using UnityEngine;
 public class ResourcesGenerator : MonoBehaviour
 {
     public GameObject[] resourcePrefabs;
-    public float spawnInterval = 2.0f;
+    [Range(0,2f)] public float spawnInterval = 2.0f;
+    
     public float spawnAreaMin = 0.2f;
     public float spawnAreaMax = 0.8f;
 
     private Camera _mainCamera;
     private float _timer;
+    
+    public float minimumSpawnInterval = 0.5f; 
+    public float intervalDecrease = 0.025f; 
+
+    private float _timeSinceStart;
 
     void Start()
     {
@@ -20,11 +26,12 @@ public class ResourcesGenerator : MonoBehaviour
 
     void Update()
     {
+        _timeSinceStart += Time.deltaTime;
         _timer -= Time.deltaTime;
         if (_timer <= 0)
         {
             SpawnResource();
-            _timer = spawnInterval;
+            _timer = Mathf.Max(minimumSpawnInterval,spawnInterval - _timeSinceStart * intervalDecrease);
         }
     }
 

@@ -1673,9 +1673,11 @@ MonoBehaviour:
   - {fileID: 2034623449153659978, guid: f0a0acb9f6c4fc343be6046c084bd1de, type: 3}
   - {fileID: 2034623449153659978, guid: f0a0acb9f6c4fc343be6046c084bd1de, type: 3}
   - {fileID: 4971409039297682687, guid: 28e47376ab2e85246afa7c9c649ba5ab, type: 3}
-  spawnInterval: 3
+  spawnInterval: 2
   spawnAreaMin: 0.1
   spawnAreaMax: 0.6
+  minimumSpawnInterval: 0.5
+  intervalDecrease: 0.05
 --- !u!4 &921048130 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9045561821195424287, guid: 28e47376ab2e85246afa7c9c649ba5ab, type: 3}
@@ -1859,7 +1861,7 @@ MonoBehaviour:
   textResourceA: {fileID: 201824807}
   textResourceB: {fileID: 0}
   textResourceC: {fileID: 10906522}
-  consumeResourceIncrease: 2
+  consumeResourceIncrease: 1.5
   currentResourceA: 0
   currentResourceB: 0
   currentResourceC: 0
@@ -2619,7 +2621,7 @@ MonoBehaviour:
   asteroidPrefab: {fileID: 2509817195473835411, guid: d226709ff42e5814086b2abd39bd854d, type: 3}
   spawnInterval: 5
   minimumSpawnInterval: 1
-  decreaseRate: 22
+  decreaseRate: 10
 --- !u!4 &1684847532
 Transform:
   m_ObjectHideFlags: 0
@@ -2705,7 +2707,7 @@ MonoBehaviour:
   textResourceA: {fileID: 1988258437}
   textResourceB: {fileID: 2140042359}
   textResourceC: {fileID: 1556685578}
-  consumeResourceIncrease: 2
+  consumeResourceIncrease: 1.5
   currentResourceA: 0
   currentResourceB: 0
   currentResourceC: 0
@@ -3336,7 +3338,7 @@ MonoBehaviour:
   textResourceA: {fileID: 423836112}
   textResourceB: {fileID: 0}
   textResourceC: {fileID: 0}
-  consumeResourceIncrease: 2
+  consumeResourceIncrease: 1.5
   currentResourceA: 0
   currentResourceB: 0
   currentResourceC: 0

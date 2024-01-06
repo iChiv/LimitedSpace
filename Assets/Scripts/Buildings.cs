@@ -16,7 +16,7 @@ public class Buildings : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     public TextMeshProUGUI textResourceA;
     public TextMeshProUGUI textResourceB;
     public TextMeshProUGUI textResourceC;
-    public int consumeResourceIncrease = 2;
+    public float consumeResourceIncrease = 1.5f;
 
     [SerializeField] private int currentResourceA;
     [SerializeField] private int currentResourceB;
@@ -122,9 +122,9 @@ public class Buildings : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             _spaceShip.ResourceConsume();
         }
 
-        requiredResourceA *= consumeResourceIncrease;
-        requiredResourceB *= consumeResourceIncrease;
-        requiredResourceC *= consumeResourceIncrease;
+        requiredResourceA = Mathf.FloorToInt(requiredResourceA * consumeResourceIncrease);
+        requiredResourceB = Mathf.FloorToInt(requiredResourceB * consumeResourceIncrease);
+        requiredResourceC = Mathf.FloorToInt(requiredResourceC * consumeResourceIncrease);
         
         UpdateResourceTexts();
     }
