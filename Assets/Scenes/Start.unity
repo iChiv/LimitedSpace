@@ -187,6 +187,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isDragging: 0
   pickUp: {fileID: 8300000, guid: 6ea8187e3bb96784c8fbfd193ea3cead, type: 3}
+  buildingleLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!50 &159070561
 Rigidbody2D:
   serializedVersion: 4
@@ -361,7 +364,7 @@ GameObject:
   - component: {fileID: 238486277}
   - component: {fileID: 238486276}
   - component: {fileID: 238486279}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -589,6 +592,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isDragging: 0
   pickUp: {fileID: 8300000, guid: 6ea8187e3bb96784c8fbfd193ea3cead, type: 3}
+  buildingleLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!50 &370838764
 Rigidbody2D:
   serializedVersion: 4
@@ -852,6 +858,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isDragging: 0
   pickUp: {fileID: 8300000, guid: 6ea8187e3bb96784c8fbfd193ea3cead, type: 3}
+  buildingleLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!50 &444475545
 Rigidbody2D:
   serializedVersion: 4
@@ -1040,6 +1049,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isDragging: 0
   pickUp: {fileID: 8300000, guid: 6ea8187e3bb96784c8fbfd193ea3cead, type: 3}
+  buildingleLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!50 &538167317
 Rigidbody2D:
   serializedVersion: 4
@@ -1383,6 +1395,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isDragging: 0
   pickUp: {fileID: 8300000, guid: 6ea8187e3bb96784c8fbfd193ea3cead, type: 3}
+  buildingleLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!50 &742772238
 Rigidbody2D:
   serializedVersion: 4
@@ -1694,6 +1709,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isDragging: 0
   pickUp: {fileID: 8300000, guid: 6ea8187e3bb96784c8fbfd193ea3cead, type: 3}
+  buildingleLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!50 &913212977
 Rigidbody2D:
   serializedVersion: 4
@@ -1911,6 +1929,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isDragging: 0
   pickUp: {fileID: 8300000, guid: 6ea8187e3bb96784c8fbfd193ea3cead, type: 3}
+  buildingleLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!50 &956515568
 Rigidbody2D:
   serializedVersion: 4
@@ -2099,6 +2120,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isDragging: 0
   pickUp: {fileID: 8300000, guid: 6ea8187e3bb96784c8fbfd193ea3cead, type: 3}
+  buildingleLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!50 &965578279
 Rigidbody2D:
   serializedVersion: 4
@@ -2236,7 +2260,7 @@ GameObject:
   - component: {fileID: 977201518}
   - component: {fileID: 977201517}
   - component: {fileID: 977201520}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2464,6 +2488,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isDragging: 0
   pickUp: {fileID: 8300000, guid: 6ea8187e3bb96784c8fbfd193ea3cead, type: 3}
+  buildingleLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!50 &1145987410
 Rigidbody2D:
   serializedVersion: 4
@@ -2652,6 +2679,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isDragging: 0
   pickUp: {fileID: 8300000, guid: 6ea8187e3bb96784c8fbfd193ea3cead, type: 3}
+  buildingleLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!50 &1190777353
 Rigidbody2D:
   serializedVersion: 4
@@ -2963,6 +2993,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isDragging: 0
   pickUp: {fileID: 8300000, guid: 6ea8187e3bb96784c8fbfd193ea3cead, type: 3}
+  buildingleLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!50 &1286044204
 Rigidbody2D:
   serializedVersion: 4
@@ -3490,7 +3523,7 @@ GameObject:
   - component: {fileID: 1575244012}
   - component: {fileID: 1575244011}
   - component: {fileID: 1575244014}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3718,6 +3751,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isDragging: 0
   pickUp: {fileID: 8300000, guid: 6ea8187e3bb96784c8fbfd193ea3cead, type: 3}
+  buildingleLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!50 &1592883477
 Rigidbody2D:
   serializedVersion: 4
@@ -4043,6 +4079,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isDragging: 0
   pickUp: {fileID: 8300000, guid: 6ea8187e3bb96784c8fbfd193ea3cead, type: 3}
+  buildingleLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!50 &1740448713
 Rigidbody2D:
   serializedVersion: 4
@@ -4335,6 +4374,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isDragging: 0
   pickUp: {fileID: 8300000, guid: 6ea8187e3bb96784c8fbfd193ea3cead, type: 3}
+  buildingleLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!50 &1892680614
 Rigidbody2D:
   serializedVersion: 4
@@ -4472,7 +4514,7 @@ GameObject:
   - component: {fileID: 2012614832}
   - component: {fileID: 2012614831}
   - component: {fileID: 2012614834}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -14,7 +14,6 @@ public class UIBuildingPanel : MonoBehaviour
     void Start()
     {
         _panelCanvasGroup = buildingPanel.GetComponent<CanvasGroup>();
-        _panelCanvasGroup.alpha = 0f;
     }
 
     public void ShowPanel()
@@ -24,7 +23,7 @@ public class UIBuildingPanel : MonoBehaviour
     
     public void HidePanel()
     {
-        StartCoroutine(FadeCanvsGroup(_panelCanvasGroup, _panelCanvasGroup.alpha, 0, fadeDuration));
+        StartCoroutine(FadeCanvsGroup(_panelCanvasGroup, _panelCanvasGroup.alpha, 0.1f, fadeDuration));
     }
 
     private IEnumerator FadeCanvsGroup(CanvasGroup cg, float start, float end, float duration)

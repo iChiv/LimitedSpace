@@ -34,6 +34,10 @@ public class Buildings : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     private CanvasGroup _canvasGroup;
     private Vector2 _originalPos;
 
+    public TextMeshProUGUI resourceADisplay;
+    public TextMeshProUGUI resourceBDisplay;
+    public TextMeshProUGUI resourceCDisplay;
+
     private float _currentRotation = 0f;
 
     private void Awake()
@@ -162,5 +166,18 @@ public class Buildings : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         }
 
         _canvasGroup.alpha = _canBuild ? 1.0f : 0.2f;
+        if (resourceADisplay != null)
+        {
+            resourceADisplay.alpha = _canBuild ? 1.0f : 0.2f;
+        }
+        if (resourceBDisplay != null)
+        {
+            resourceBDisplay.alpha = _canBuild ? 1.0f : 0.2f;
+        }
+        if (resourceCDisplay != null)
+        {
+            resourceCDisplay.alpha = _canBuild ? 1.0f : 0.2f;
+        }
+        
     }
 }

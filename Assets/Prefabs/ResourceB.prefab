@@ -129,6 +129,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isDragging: 0
   pickUp: {fileID: 8300000, guid: 6ea8187e3bb96784c8fbfd193ea3cead, type: 3}
+  buildingleLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!114 &6481749554371938392
 MonoBehaviour:
   m_ObjectHideFlags: 0

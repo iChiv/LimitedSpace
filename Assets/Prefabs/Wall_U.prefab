@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 2607189191154622286}
   - component: {fileID: 5875111381093735346}
   - component: {fileID: -6442159060939294950}
-  m_Layer: 0
+  - component: {fileID: 2966206071997574844}
+  m_Layer: 9
   m_Name: Wall_U
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,3 +177,17 @@ MonoBehaviour:
   destructionSound: {fileID: 0}
   volume: 0.5
   health: 3
+--- !u!114 &2966206071997574844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2228573250151594053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e0e80ac72cb31418fb3da0743fbbf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceForce: 10
+  bounceSpaceship: 2

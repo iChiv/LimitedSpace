@@ -153,11 +153,11 @@ RectTransform:
   m_LocalScale: {x: 1.4066, y: 1.4066, z: 1.4066}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1882162986}
+  m_Father: {fileID: 545196242}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 304.4, y: 64}
+  m_AnchoredPosition: {x: 302.4, y: 439.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &10906522
@@ -189,8 +189,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4292894197
-  m_fontColor: {r: 0.9607844, g: 0.3647059, b: 0.87843144, a: 1}
+    rgba: 870342133
+  m_fontColor: {r: 0.9607844, g: 0.3647059, b: 0.87843144, a: 0.2}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -287,11 +287,11 @@ RectTransform:
   m_LocalScale: {x: 1.4066, y: 1.4066, z: 1.4066}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1882162986}
+  m_Father: {fileID: 545196242}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 187.2, y: 64}
+  m_AnchoredPosition: {x: 185.2, y: 439.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &201824807
@@ -323,8 +323,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288410005
-  m_fontColor: {r: 0.58431375, g: 0.9450981, b: 0.60784316, a: 1}
+    rgba: 865857941
+  m_fontColor: {r: 0.58431375, g: 0.9450981, b: 0.60784316, a: 0.2}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -404,7 +404,7 @@ GameObject:
   - component: {fileID: 229580477}
   - component: {fileID: 229580480}
   - component: {fileID: 229580481}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -581,7 +581,7 @@ GameObject:
   - component: {fileID: 306497184}
   - component: {fileID: 306497187}
   - component: {fileID: 306497188}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -775,11 +775,11 @@ RectTransform:
   m_LocalScale: {x: 1.4066, y: 1.4066, z: 1.4066}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1882162986}
+  m_Father: {fileID: 545196242}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -106, y: 64}
+  m_AnchoredPosition: {x: -108, y: 439.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &423836112
@@ -811,8 +811,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288410005
-  m_fontColor: {r: 0.58431375, g: 0.9450981, b: 0.60784316, a: 1}
+    rgba: 865857941
+  m_fontColor: {r: 0.58431375, g: 0.9450981, b: 0.60784316, a: 0.2}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1193,6 +1193,12 @@ RectTransform:
   - {fileID: 1875377570}
   - {fileID: 1882162986}
   - {fileID: 746237522}
+  - {fileID: 423836111}
+  - {fileID: 201824806}
+  - {fileID: 10906521}
+  - {fileID: 1988258436}
+  - {fileID: 1556685577}
+  - {fileID: 2140042358}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1969,7 +1975,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441179805}
   m_Enabled: 1
-  m_Alpha: 0.2
+  m_Alpha: 0.1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -1997,6 +2003,9 @@ MonoBehaviour:
   currentResourceC: 0
   building: {fileID: 4421407096967483075, guid: 5aaf31e61fe684bdc83e8ad65c50b027, type: 3}
   uiPanelBuilding: {fileID: 1882162985}
+  resourceADisplay: {fileID: 201824807}
+  resourceBDisplay: {fileID: 0}
+  resourceCDisplay: {fileID: 10906522}
 --- !u!114 &1441179809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2048,7 +2057,7 @@ GameObject:
   - component: {fileID: 1467378331}
   - component: {fileID: 1467378334}
   - component: {fileID: 1467378335}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2242,11 +2251,11 @@ RectTransform:
   m_LocalScale: {x: 1.4066, y: 1.4066, z: 1.4066}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1882162986}
+  m_Father: {fileID: 545196242}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 651.7, y: 64}
+  m_AnchoredPosition: {x: 649.7, y: 439.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1556685578
@@ -2278,8 +2287,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294915640
-  m_fontColor: {r: 0.21960786, g: 0.21176472, b: 1, a: 1}
+    rgba: 872363576
+  m_fontColor: {r: 0.21960786, g: 0.21176472, b: 1, a: 0.2}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2784,7 +2793,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718033498}
   m_Enabled: 1
-  m_Alpha: 0.2
+  m_Alpha: 0.1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -2812,6 +2821,9 @@ MonoBehaviour:
   currentResourceC: 0
   building: {fileID: 3785169117606678582, guid: 6c559d21cf92be14392eec21f063f89f, type: 3}
   uiPanelBuilding: {fileID: 1882162985}
+  resourceADisplay: {fileID: 1988258437}
+  resourceBDisplay: {fileID: 1556685578}
+  resourceCDisplay: {fileID: 2140042359}
 --- !u!114 &1718033502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3001,12 +3013,6 @@ RectTransform:
   - {fileID: 2005790061}
   - {fileID: 1718033499}
   - {fileID: 1441179806}
-  - {fileID: 423836111}
-  - {fileID: 201824806}
-  - {fileID: 10906521}
-  - {fileID: 1988258436}
-  - {fileID: 1556685577}
-  - {fileID: 2140042358}
   m_Father: {fileID: 545196242}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3036,7 +3042,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1882162985}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0.1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -3098,7 +3104,7 @@ GameObject:
   - component: {fileID: 1887602576}
   - component: {fileID: 1887602579}
   - component: {fileID: 1887602580}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3292,11 +3298,11 @@ RectTransform:
   m_LocalScale: {x: 1.4066, y: 1.4066, z: 1.4066}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1882162986}
+  m_Father: {fileID: 545196242}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 472.5, y: 64}
+  m_AnchoredPosition: {x: 470.5, y: 439.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1988258437
@@ -3328,8 +3334,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288410005
-  m_fontColor: {r: 0.58431375, g: 0.9450981, b: 0.60784316, a: 1}
+    rgba: 865857941
+  m_fontColor: {r: 0.58431375, g: 0.9450981, b: 0.60784316, a: 0.2}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3459,6 +3465,9 @@ MonoBehaviour:
   currentResourceC: 0
   building: {fileID: 2228573250151594053, guid: 5bec9761f22914bbe85fffc9e0b8bd5d, type: 3}
   uiPanelBuilding: {fileID: 1882162985}
+  resourceADisplay: {fileID: 423836112}
+  resourceBDisplay: {fileID: 0}
+  resourceCDisplay: {fileID: 0}
 --- !u!114 &2005790063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3505,7 +3514,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2005790060}
   m_Enabled: 1
-  m_Alpha: 0.2
+  m_Alpha: 0.1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -3539,11 +3548,11 @@ RectTransform:
   m_LocalScale: {x: 1.4066, y: 1.4066, z: 1.4066}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1882162986}
+  m_Father: {fileID: 545196242}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 560, y: 64}
+  m_AnchoredPosition: {x: 558, y: 439.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2140042359
@@ -3575,8 +3584,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4293352190
-  m_fontColor: {r: 0.9960785, g: 0.3529412, b: 0.9058824, a: 1}
+    rgba: 870800126
+  m_fontColor: {r: 0.9960785, g: 0.3529412, b: 0.9058824, a: 0.2}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5104953623483924658}
   - component: {fileID: 8918870174265324273}
   - component: {fileID: 6032072735100862245}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spinner
   m_TagString: Untagged
   m_Icon: {fileID: 0}

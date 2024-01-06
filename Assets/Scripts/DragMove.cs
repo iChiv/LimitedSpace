@@ -11,6 +11,7 @@ public class DragMove : MonoBehaviour
     private Rigidbody2D _rb;
 
     public AudioClip pickUp;
+    public LayerMask buildingleLayer;
 
     private void Start()
     {
@@ -41,8 +42,21 @@ public class DragMove : MonoBehaviour
             _rb.isKinematic = true;
             Vector2 currentMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 positionOffset = currentMousePosition - _initialMousePosition;
-            Vector2 newPosition = _initialObjectPosition + new Vector3(positionOffset.x, positionOffset.y, 0);
-            _rb.MovePosition(newPosition);
+            
+            Vector2 targetPosition = _initialObjectPosition + new Vector3(positionOffset.x, positionOffset.y, 0);
+            RaycastHit2D hit = Physics2D.Linecast(transform.position, targetPosition, buildingleLayer);
+            if (hit.collider == null)
+            {
+                _rb.MovePosition(targetPosition);
+            }
+            else
+            {
+                // 遇到障碍物，停止移动
+                _isDragging = false;
+            }
+            
+            // Vector2 newPosition = _initialObjectPosition + new Vector3(positionOffset.x, positionOffset.y, 0);
+            // _rb.MovePosition(newPosition);
         }
 
         if (Input.GetMouseButtonUp(0))
