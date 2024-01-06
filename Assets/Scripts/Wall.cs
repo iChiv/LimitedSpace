@@ -11,6 +11,7 @@ public class Wall : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         Rigidbody2D rb = other.collider.GetComponent<Rigidbody2D>();
+        float actualBounceForce = Random.Range(bounceForce * 0.8f, bounceForce * 1.2f);
 
 
         if (rb != null)
@@ -19,11 +20,11 @@ public class Wall : MonoBehaviour
             Vector2 bounceDirection = -normal.normalized;
             if (other.gameObject.CompareTag("Player"))
             {
-                rb.AddForce(bounceDirection * bounceForce * bounceSpaceship);
+                rb.AddForce(bounceDirection * actualBounceForce * bounceSpaceship);
             }
             else
             {
-                rb.AddForce(bounceDirection * bounceForce);
+                rb.AddForce(bounceDirection * actualBounceForce);
             }
         }
     }
