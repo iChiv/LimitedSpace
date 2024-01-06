@@ -201,7 +201,7 @@ MonoBehaviour:
   volume: 1
   health: 1
   resourceLevel: 3
-  resourceType: 0
+  resourceType: 6
   detectionRadius: 0.1
   bigResourcePrefab: {fileID: 0}
   mergeSound: {fileID: 8300000, guid: ef50da98c03a32a438b5eb2dfa29cf88, type: 3}
