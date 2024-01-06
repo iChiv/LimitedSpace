@@ -26,6 +26,10 @@ public class STARTPosition : MonoBehaviour
         {
             _rb.MovePosition(_targetPosition);
             _rb.velocity = Vector2.zero;
+            _rb.angularVelocity = 0f;
+            
+            transform.rotation = Quaternion.identity;
+            
             GetComponent<DragMove>().enabled = false;
             GetComponent<Collider2D>().enabled = false;
             enabled = false; 

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9063979817653623345}
   - component: {fileID: 6713452474555074915}
   - component: {fileID: 6515711299498556039}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ResourceC-LV2
   m_TagString: ResourceTypeC
   m_Icon: {fileID: 0}

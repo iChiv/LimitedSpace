@@ -7,8 +7,8 @@ public class ResourcesGenerator : MonoBehaviour
     public GameObject[] resourcePrefabs;
     [Range(0,3f)] public float spawnInterval = 3.0f;
     
-    public float spawnAreaMin = 0.2f;
-    public float spawnAreaMax = 0.8f;
+    public float spawnAreaMin = 0.3f;
+    public float spawnAreaMax = 0.7f;
 
     private Camera _mainCamera;
     private float _timer;

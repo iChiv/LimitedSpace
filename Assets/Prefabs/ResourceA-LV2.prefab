@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1812416665440915833}
   - component: {fileID: 7752681375260716768}
   - component: {fileID: -2943437358937495618}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ResourceA-LV2
   m_TagString: ResourceTypeA
   m_Icon: {fileID: 0}

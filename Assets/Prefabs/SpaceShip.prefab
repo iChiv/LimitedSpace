@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 2754560598676451194}
   - component: {fileID: 2192085155547486117}
   - component: {fileID: 5576257289832620399}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpaceShip
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -392,7 +392,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0.6
+  m_LinearDrag: 600
   m_AngularDrag: 3
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -456,7 +456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e8ff3bf478c94f7e8b5e9c5a6b6d822, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 2000
   turnSpeed: 60
   maxAngularVelocity: 30
   engineFire: {fileID: 1938305032409033932}

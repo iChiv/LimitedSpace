@@ -47,6 +47,7 @@ public class SpaceShip : AsteroidImpact
             other.gameObject.CompareTag("ResourceTypeB") ||
             other.gameObject.CompareTag("ResourceTypeC"))
         {
+            GetComponent<Rigidbody2D>().isKinematic = true;
             Resources resources = other.gameObject.GetComponent<Resources>();
             if (resources != null)
             {
@@ -57,7 +58,17 @@ public class SpaceShip : AsteroidImpact
         
         base.OnCollisionEnter2D(other);
     }
-    
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("ResourceTypeA") ||
+            other.gameObject.CompareTag("ResourceTypeB") ||
+            other.gameObject.CompareTag("ResourceTypeC"))
+        {
+            GetComponent<Rigidbody2D>().isKinematic = false; // 重新启用物理影响
+        }
+    }
+
     protected override void DestoryObject()
     {
         if (explosionVFX != null)

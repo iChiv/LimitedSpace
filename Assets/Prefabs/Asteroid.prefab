@@ -131,7 +131,7 @@ MonoBehaviour:
   destructionVFX: {fileID: 3445041688191113288, guid: 667e556e9af363548802b4b90a5ef86d, type: 3}
   destructionSound: {fileID: 8300000, guid: 3f095f640d5205346844b3baeb0a9f17, type: 3}
   volume: 1
-  rigidbody: {fileID: 7350545548233662667}
+  rb: {fileID: 7350545548233662667}
   TorqueMax: 50
   SpeedMax: 2
   asteroidSprites:

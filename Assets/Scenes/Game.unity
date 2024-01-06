@@ -2667,7 +2667,7 @@ RectTransform:
   m_GameObject: {fileID: 1718033498}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0114785, y: 1.0114785, z: 1.0114785}
+  m_LocalScale: {x: 1.2022433, y: 1.2022433, z: 1.2022433}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1882162986}
@@ -2980,7 +2980,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1882162985}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -3699,18 +3699,6 @@ PrefabInstance:
       propertyPath: fadePanel
       value: 
       objectReference: {fileID: 746237523}
-    - target: {fileID: 2754560598676451194, guid: 47dc2969804e5644aaef0c8fccbc2268, type: 3}
-      propertyPath: resourceCountTypeA
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2754560598676451194, guid: 47dc2969804e5644aaef0c8fccbc2268, type: 3}
-      propertyPath: resourceCountTypeB
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2754560598676451194, guid: 47dc2969804e5644aaef0c8fccbc2268, type: 3}
-      propertyPath: resourceCountTypeC
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2754560598676451194, guid: 47dc2969804e5644aaef0c8fccbc2268, type: 3}
       propertyPath: resourceCountTextTypeA
       value: 
