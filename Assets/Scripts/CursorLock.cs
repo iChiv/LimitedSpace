@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CursorLock : MonoBehaviour
 {
-    private bool isLocked = true;
+    private bool _isLocked = true;
 
     void Start()
     {
@@ -18,7 +18,7 @@ public class CursorLock : MonoBehaviour
             UnlockCursor();
         }
 
-        if (isLocked && Input.GetMouseButtonDown(0))
+        if (!_isLocked && Input.GetMouseButtonDown(0))
         {
             LockCursor();
         }
@@ -28,13 +28,13 @@ public class CursorLock : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
-        isLocked = true;
+        _isLocked = true;
     }
 
     void UnlockCursor()
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        isLocked = false;
+        _isLocked = false;
     }
 }
