@@ -78,12 +78,37 @@ public class ResourcesGenerator : MonoBehaviour
         
     }
 
+    //Vector2 GetRandomPositionInView()
+    //{
+    //    //float randomX = Random.Range(spawnAreaMin, spawnAreaMax);
+    //    //float randomY = Random.Range(spawnAreaMin, spawnAreaMax);
+        
+    //    float randomX = Random.Range(0f, 1f);
+    //    float randomY = Random.Range(0.8f, 1.0f);
+
+    //    Vector2 viewportPoint = new Vector2(randomX, randomY);
+        
+    //    return _mainCamera.ViewportToWorldPoint(viewportPoint);
+
+    //}
+
     Vector2 GetRandomPositionInView()
     {
-        float randomX = Random.Range(spawnAreaMin, spawnAreaMax);
-        float randomY = Random.Range(spawnAreaMin, spawnAreaMax);
-        Vector2 viewportPoint = new Vector2(randomX, randomY);
-        
-        return _mainCamera.ViewportToWorldPoint(viewportPoint);
+        float randomX = Random.value; // 0 到 1 之间的随机值
+        float randomY = Random.value; // 0 到 1 之间的随机值
+
+        // 随机选择固定 X 或 Y 坐标到边缘
+        if (Random.value > 0.5f)
+        {
+            // 固定 X 坐标到左或右边缘
+            randomX = Random.value > 0.5f ? 0.05f : 0.95f;
+        }
+        else
+        {
+            // 固定 Y 坐标到上或下边缘
+            randomY = Random.value > 0.5f ? 0.05f : 0.95f;
+        }
+
+        return _mainCamera.ViewportToWorldPoint(new Vector2(randomX, randomY));
     }
 }
