@@ -5,7 +5,7 @@ using UnityEngine;
 public class ResourcesGenerator : MonoBehaviour
 {
     public GameObject[] resourcePrefabs;
-    [Range(0,2f)] public float spawnInterval = 2.0f;
+    [Range(0,3f)] public float spawnInterval = 3.0f;
     
     public float spawnAreaMin = 0.2f;
     public float spawnAreaMax = 0.8f;
@@ -14,7 +14,7 @@ public class ResourcesGenerator : MonoBehaviour
     private float _timer;
     
     public float minimumSpawnInterval = 0.5f; 
-    public float intervalDecrease = 0.025f; 
+    public float intervalDecrease = 0.0125f; 
 
     private float _timeSinceStart;
 
