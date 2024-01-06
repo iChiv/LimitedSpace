@@ -42,7 +42,8 @@ public class AsteroidGenerater : MonoBehaviour
     void SpawnAsteroid()
     {
         Vector3 spawnPosition = GetRandomSpawnPositionOutsideCameraView();
-        Instantiate(asteroidPrefab, spawnPosition, Quaternion.identity);
+        GameObject newAsteroid =  Instantiate(asteroidPrefab, spawnPosition, Quaternion.identity);
+        newAsteroid.transform.parent = this.gameObject.transform;
     }
 
     public Vector3 GetRandomSpawnPositionOutsideCameraView()

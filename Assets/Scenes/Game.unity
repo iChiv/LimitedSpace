@@ -2721,7 +2721,7 @@ MonoBehaviour:
   asteroidPrefab: {fileID: 2509817195473835411, guid: d226709ff42e5814086b2abd39bd854d, type: 3}
   spawnInterval: 5
   minimumSpawnInterval: 1
-  decreaseRate: 5
+  decreaseRate: 10
 --- !u!4 &1684847532
 Transform:
   m_ObjectHideFlags: 0
