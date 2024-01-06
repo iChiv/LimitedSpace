@@ -1670,14 +1670,14 @@ MonoBehaviour:
   - {fileID: 6133147782616586481, guid: 1c2a64de4628d6346a0a333c9490bfc5, type: 3}
   - {fileID: 6133147782616586481, guid: 1c2a64de4628d6346a0a333c9490bfc5, type: 3}
   - {fileID: 6133147782616586481, guid: 1c2a64de4628d6346a0a333c9490bfc5, type: 3}
-  - {fileID: 2034623449153659978, guid: f0a0acb9f6c4fc343be6046c084bd1de, type: 3}
-  - {fileID: 2034623449153659978, guid: f0a0acb9f6c4fc343be6046c084bd1de, type: 3}
   - {fileID: 4971409039297682687, guid: 28e47376ab2e85246afa7c9c649ba5ab, type: 3}
+  - {fileID: 4971409039297682687, guid: 28e47376ab2e85246afa7c9c649ba5ab, type: 3}
+  - {fileID: 2034623449153659978, guid: f0a0acb9f6c4fc343be6046c084bd1de, type: 3}
   spawnInterval: 2
   spawnAreaMin: 0.1
   spawnAreaMax: 0.6
   minimumSpawnInterval: 0.5
-  intervalDecrease: 0.05
+  intervalDecrease: 0.0125
 --- !u!4 &921048130 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9045561821195424287, guid: 28e47376ab2e85246afa7c9c649ba5ab, type: 3}
