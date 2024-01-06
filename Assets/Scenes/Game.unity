@@ -1531,7 +1531,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a2fd9ce0982d31e4099ba6f19e46507d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0b83b4c2c8c374249a49538078d825a0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
   m_Pitch: 1
@@ -2619,7 +2619,7 @@ MonoBehaviour:
   asteroidPrefab: {fileID: 2509817195473835411, guid: d226709ff42e5814086b2abd39bd854d, type: 3}
   spawnInterval: 5
   minimumSpawnInterval: 1
-  decreaseRate: 0.02
+  decreaseRate: 22
 --- !u!4 &1684847532
 Transform:
   m_ObjectHideFlags: 0
@@ -3699,15 +3699,15 @@ PrefabInstance:
       objectReference: {fileID: 746237523}
     - target: {fileID: 2754560598676451194, guid: 47dc2969804e5644aaef0c8fccbc2268, type: 3}
       propertyPath: resourceCountTypeA
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2754560598676451194, guid: 47dc2969804e5644aaef0c8fccbc2268, type: 3}
       propertyPath: resourceCountTypeB
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2754560598676451194, guid: 47dc2969804e5644aaef0c8fccbc2268, type: 3}
       propertyPath: resourceCountTypeC
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2754560598676451194, guid: 47dc2969804e5644aaef0c8fccbc2268, type: 3}
       propertyPath: resourceCountTextTypeA
