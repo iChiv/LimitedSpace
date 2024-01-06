@@ -27,6 +27,7 @@ public class STARTPosition : MonoBehaviour
             _rb.MovePosition(_targetPosition);
             _rb.velocity = Vector2.zero;
             GetComponent<DragMove>().enabled = false;
+            GetComponent<Collider2D>().enabled = false;
             enabled = false; 
             // SceneManager.LoadScene("Game");
         }
