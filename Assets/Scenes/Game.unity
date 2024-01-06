@@ -403,6 +403,7 @@ GameObject:
   - component: {fileID: 229580478}
   - component: {fileID: 229580477}
   - component: {fileID: 229580480}
+  - component: {fileID: 229580481}
   m_Layer: 0
   m_Name: Wall (2)
   m_TagString: Untagged
@@ -553,6 +554,20 @@ PolygonCollider2D:
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
   m_UseDelaunayMesh: 0
+--- !u!114 &229580481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229580476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e0e80ac72cb31418fb3da0743fbbf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceForce: 500
+  bounceSpaceship: 1
 --- !u!1 &306497183
 GameObject:
   m_ObjectHideFlags: 0
@@ -565,6 +580,7 @@ GameObject:
   - component: {fileID: 306497185}
   - component: {fileID: 306497184}
   - component: {fileID: 306497187}
+  - component: {fileID: 306497188}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -715,6 +731,20 @@ PolygonCollider2D:
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
   m_UseDelaunayMesh: 0
+--- !u!114 &306497188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306497183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e0e80ac72cb31418fb3da0743fbbf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceForce: 500
+  bounceSpaceship: 1
 --- !u!1 &423836110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,6 +1515,7 @@ GameObject:
   - component: {fileID: 767592636}
   - component: {fileID: 767592635}
   - component: {fileID: 767592637}
+  - component: {fileID: 767592638}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -1617,6 +1648,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &767592638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767592634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 552b52a91ee12b141b45b249469510e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &802067199
 GameObject:
   m_ObjectHideFlags: 0
@@ -1962,6 +2005,7 @@ GameObject:
   - component: {fileID: 1467378332}
   - component: {fileID: 1467378331}
   - component: {fileID: 1467378334}
+  - component: {fileID: 1467378335}
   m_Layer: 0
   m_Name: Wall (1)
   m_TagString: Untagged
@@ -2112,6 +2156,20 @@ PolygonCollider2D:
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
   m_UseDelaunayMesh: 0
+--- !u!114 &1467378335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467378330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e0e80ac72cb31418fb3da0743fbbf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceForce: 500
+  bounceSpaceship: 1
 --- !u!1 &1556685576
 GameObject:
   m_ObjectHideFlags: 0
@@ -2996,6 +3054,7 @@ GameObject:
   - component: {fileID: 1887602577}
   - component: {fileID: 1887602576}
   - component: {fileID: 1887602579}
+  - component: {fileID: 1887602580}
   m_Layer: 0
   m_Name: Wall (3)
   m_TagString: Untagged
@@ -3146,6 +3205,20 @@ PolygonCollider2D:
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
   m_UseDelaunayMesh: 0
+--- !u!114 &1887602580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887602575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e0e80ac72cb31418fb3da0743fbbf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceForce: 500
+  bounceSpaceship: 1
 --- !u!1 &1988258435
 GameObject:
   m_ObjectHideFlags: 0

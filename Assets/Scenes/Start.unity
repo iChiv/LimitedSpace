@@ -360,6 +360,7 @@ GameObject:
   - component: {fileID: 238486278}
   - component: {fileID: 238486277}
   - component: {fileID: 238486276}
+  - component: {fileID: 238486279}
   m_Layer: 0
   m_Name: Wall (1)
   m_TagString: Untagged
@@ -510,6 +511,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &238486279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238486274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e0e80ac72cb31418fb3da0743fbbf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceForce: 500
+  bounceSpaceship: 1
 --- !u!1 &443445217
 GameObject:
   m_ObjectHideFlags: 0
@@ -1844,6 +1859,7 @@ GameObject:
   - component: {fileID: 977201519}
   - component: {fileID: 977201518}
   - component: {fileID: 977201517}
+  - component: {fileID: 977201520}
   m_Layer: 0
   m_Name: Wall (3)
   m_TagString: Untagged
@@ -1994,6 +2010,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &977201520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977201515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e0e80ac72cb31418fb3da0743fbbf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceForce: 500
+  bounceSpaceship: 1
 --- !u!1 &1145987406
 GameObject:
   m_ObjectHideFlags: 0
@@ -3080,6 +3110,7 @@ GameObject:
   - component: {fileID: 1575244013}
   - component: {fileID: 1575244012}
   - component: {fileID: 1575244011}
+  - component: {fileID: 1575244014}
   m_Layer: 0
   m_Name: Wall (2)
   m_TagString: Untagged
@@ -3230,6 +3261,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1575244014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575244009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e0e80ac72cb31418fb3da0743fbbf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceForce: 500
+  bounceSpaceship: 1
 --- !u!1 &1592883473
 GameObject:
   m_ObjectHideFlags: 0
@@ -3859,6 +3904,7 @@ GameObject:
   - component: {fileID: 2012614833}
   - component: {fileID: 2012614832}
   - component: {fileID: 2012614831}
+  - component: {fileID: 2012614834}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -4009,6 +4055,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2012614834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012614829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e0e80ac72cb31418fb3da0743fbbf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceForce: 500
+  bounceSpaceship: 1
 --- !u!1 &2105556164
 GameObject:
   m_ObjectHideFlags: 0
@@ -4021,6 +4081,7 @@ GameObject:
   - component: {fileID: 2105556165}
   - component: {fileID: 2105556167}
   - component: {fileID: 2105556168}
+  - component: {fileID: 2105556169}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -4172,6 +4233,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2105556169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105556164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 552b52a91ee12b141b45b249469510e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
