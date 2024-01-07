@@ -46,7 +46,7 @@ public class ResourcesGenerator : MonoBehaviour
     {
         int layer = LayerMask.NameToLayer("Resources");
         objectsCount = GetObjectsCountInLayer(layer);
-        Debug.Log("Number of objects in layer " + LayerMask.LayerToName(layer) + ": " + objectsCount);
+        // Debug.Log("Number of objects in layer " + LayerMask.LayerToName(layer) + ": " + objectsCount);
 
         _timeSinceStart += Time.deltaTime;
         _timer -= Time.deltaTime;
@@ -68,12 +68,12 @@ public class ResourcesGenerator : MonoBehaviour
         GameObject resourceParent = GameObject.Find("Resources");
         if (resourceParent != null)
         {
-            newResource.transform.parent = GameObject.Find("Resources").transform;
+            newResource.transform.parent = resourceParent.transform;
         }
         else
         {
             resourceParent = new GameObject("Resources");
-            newResource.transform.parent = GameObject.Find("Resources").transform;
+            newResource.transform.parent = resourceParent.transform;
         }
         
     }
@@ -94,18 +94,17 @@ public class ResourcesGenerator : MonoBehaviour
 
     Vector2 GetRandomPositionInView()
     {
-        float randomX = Random.value; // 0 到 1 之间的随机值
-        float randomY = Random.value; // 0 到 1 之间的随机值
-
-        // 随机选择固定 X 或 Y 坐标到边缘
+        float randomX = Random.value; 
+        float randomY = Random.value; 
+        
         if (Random.value > 0.5f)
         {
-            // 固定 X 坐标到左或右边缘
-            randomX = Random.value > 0.5f ? 0.05f : 0.95f;
+            // left and right sides
+            randomX = Random.value > 0.5f ? 0f : 1f;
         }
         else
         {
-            // 固定 Y 坐标到上或下边缘
+            // up and down sides
             randomY = Random.value > 0.5f ? 0.05f : 0.95f;
         }
 

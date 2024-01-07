@@ -48,7 +48,8 @@ public class Resources : AsteroidImpact
 
     private void MergeResources(List<GameObject> resourcesToMerge)
     {
-        Instantiate(bigResourcePrefab, transform.position, Quaternion.identity);
+        GameObject newResource = Instantiate(bigResourcePrefab, transform.position, Quaternion.identity);
+        newResource.transform.parent = GameObject.Find("Resources").transform;
         if (mergeSound != null)
         {
             AudioSource.PlayClipAtPoint(mergeSound, transform.position, volume);

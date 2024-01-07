@@ -51,7 +51,6 @@ public class DragMove : MonoBehaviour
             }
             else
             {
-                // 遇到障碍物，停止移动
                 _isDragging = false;
             }
             

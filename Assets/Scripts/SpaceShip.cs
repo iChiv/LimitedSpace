@@ -35,6 +35,7 @@ public class SpaceShip : AsteroidImpact
 
     public CanvasGroup fadePanel;
     public float fadeTime = 1f;
+    private int _totalScore;
 
     private void Start()
     {
@@ -135,6 +136,9 @@ public class SpaceShip : AsteroidImpact
                 t.UpdateResources(resourceCountTypeA,resourceCountTypeB,resourceCountTypeC);
             }
         }
+        
+        _totalScore = CalculateScore();
+        FindObjectOfType<ScoreDisplay>().UpdateScoreDisplay(_totalScore);
     }
     
     void UpdateResourceCountDisplay(TextMeshProUGUI textMesh, int count)
@@ -166,12 +170,11 @@ public class SpaceShip : AsteroidImpact
 
     void GameOver()
     {
-        int totalScore = CalculateScore();
         int highScore = PlayerPrefs.GetInt("HighScore", 0);
 
-        if (totalScore > highScore)
+        if (_totalScore > highScore)
         {
-            PlayerPrefs.SetInt("HighScore", totalScore);
+            PlayerPrefs.SetInt("HighScore", _totalScore);
             PlayerPrefs.Save();
         }
         
