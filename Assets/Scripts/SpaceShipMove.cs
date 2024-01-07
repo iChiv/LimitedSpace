@@ -7,6 +7,7 @@ using UnityEngine;
 public class SpaceShipMove : MonoBehaviour
 {
     public float moveSpeed = 10f;
+    public float boostedMoveSpeed;
     public float turnSpeed = 300f;
     public float maxAngularVelocity = 100.0f;
     public GameObject engineFire;
@@ -25,13 +26,18 @@ public class SpaceShipMove : MonoBehaviour
         float speedX = Input.GetAxis("Horizontal");
         float speedY = Input.GetAxis("Vertical");
         
+        bool isBoosting = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+        
+        
         //wasd move
         Vector2 moveDirection = new Vector2(speedX, speedY).normalized;
         if (moveDirection != Vector2.zero)
         {
             engineFire.SetActive(true);
             
-            _rb.AddForce(moveDirection * moveSpeed);
+            float currentMoveSpeed = isBoosting ? boostedMoveSpeed : moveSpeed;
+            
+            _rb.AddForce(moveDirection * currentMoveSpeed);
             
             float targetAngle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg - 90f;
             float angle = Mathf.MoveTowardsAngle(transform.eulerAngles.z, targetAngle, turnSpeed * Time.fixedDeltaTime);

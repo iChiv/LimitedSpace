@@ -35,7 +35,7 @@ public class SpaceShip : AsteroidImpact
 
     public CanvasGroup fadePanel;
     public float fadeTime = 1f;
-    private int _totalScore;
+    private int _totalScore = 0;
 
     private void Start()
     {
@@ -81,6 +81,8 @@ public class SpaceShip : AsteroidImpact
         {
             AudioSource.PlayClipAtPoint(spaceshipExplosion, transform.position, volume);
         }
+
+        GetComponent<SpaceShipMove>().enabled = false;
         StartCoroutine(FadeOutAndGameOver());
         Destroy(gameObject,2f);
     }
@@ -113,6 +115,8 @@ public class SpaceShip : AsteroidImpact
             default: points = 0; break;
         }
 
+        _totalScore += points;
+
         if (resourceType == "ResourceTypeA")
         {
             resourceCountTypeA += points;
@@ -137,7 +141,6 @@ public class SpaceShip : AsteroidImpact
             }
         }
         
-        _totalScore = CalculateScore();
         FindObjectOfType<ScoreDisplay>().UpdateScoreDisplay(_totalScore);
     }
     
