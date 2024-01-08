@@ -34,10 +34,10 @@ public class StartSceneManager : MonoBehaviour
         {
             if (!letter.IsAtTargetPosition())
             {
-                return false; // 如果有任何一个字母不在目标位置，返回 false
+                return false;
             }
         }
-        return true; // 所有字母都在目标位置
+        return true; 
     }
 
     IEnumerator FadeAndLoadScene()

@@ -137,7 +137,6 @@ public class Buildings : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         }
         else
         {
-                // 如果不能建造，重置UI位置
                 ResetBuildingPreview();
         }
     }

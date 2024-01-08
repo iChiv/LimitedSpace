@@ -29,13 +29,11 @@ public abstract class AsteroidImpact : MonoBehaviour
 
     protected virtual void DestoryObject()
     {
-        // 播放音效
         if (destructionSound != null)
         {
             AudioSource.PlayClipAtPoint(destructionSound, transform.position, volume);
         }
-
-        // 生成特效
+        
         if (destructionVFX != null)
         {
             Instantiate(destructionVFX, transform.position, Quaternion.identity);

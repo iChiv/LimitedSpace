@@ -66,7 +66,7 @@ public class SpaceShip : AsteroidImpact
             other.gameObject.CompareTag("ResourceTypeB") ||
             other.gameObject.CompareTag("ResourceTypeC"))
         {
-            GetComponent<Rigidbody2D>().isKinematic = false; // 重新启用物理影响
+            GetComponent<Rigidbody2D>().isKinematic = false; 
         }
     }
 

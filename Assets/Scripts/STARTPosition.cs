@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class STARTPosition : MonoBehaviour
 {
-    public GameObject targetPos; // 目标位置
-    private Vector2 _targetPosition; // 目标位置
-    public float snapDistance = 0.5f; // 吸附距离阈值
+    public GameObject targetPos; 
+    private Vector2 _targetPosition; 
+    public float snapDistance = 0.5f; 
 
     private DragMove _dragMove;
     private Rigidbody2D _rb;
